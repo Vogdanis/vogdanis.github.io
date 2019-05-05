@@ -1,0 +1,366 @@
+<html>
+
+<head>
+<title>Vogdanis</title>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous">
+</script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
+<!-- Fonts End -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+.photography{
+    display: block;
+}
+.electronics{
+    display: block;
+}
+.sculpture{
+    display: block;
+}
+.sculpture:hover{
+    display: block;
+    color:white;
+}
+
+body{
+background-color: black;
+/* background-color: #303030; */
+/* background-color: white; */
+}
+.col-lg-3{
+    padding-bottom: 30px;
+}
+.col-md-4 {
+    padding-bottom: 30px;
+}
+.col-sm-12 {
+    padding-bottom: 30px;
+}
+
+
+.font-d {
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    color:#ffffff3d;
+}
+.font-d:hover {
+    color:#ffffff9f;
+}
+
+.font-hover{
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    color:#ffffffc7;
+}
+.font-hover:hover{
+    color:#ffffff;
+}
+.footer-padding {
+    padding-bottom: 30px;
+}
+.project-hover{
+    position:absolute;
+    top:30%;
+    right:0%;
+    left:0%;
+    color: white;
+    opacity:0;
+}
+.project:hover .project-hover{
+    opacity: 1;
+}
+.project:hover .overlay {
+    opacity: 1;
+}
+.fade-image-hover:hover{
+    opacity:0.2;
+}
+
+
+</style>
+
+<!-- LOAD MENU AND FOOTER -->
+<script>
+    $(document).ready(function () {
+      $("#menu").load("menu.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
+    
+
+
+</head>
+
+<body>
+
+<div id="menu"></div>
+
+
+<div class="container">
+
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterElectronics">Electronics</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterSculpture">Sculpture</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterPhotography">Photography</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterAll">All</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-sm-12"><br></div>
+    </div>
+
+    <div class="row">
+        
+        <!-- ELECTRONICS  -->
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center electronics">
+            <div class="project">
+                <a href="projects/drum/drum.html"><img src="images/electronics/drum.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/drum/drum.html">PyDrum
+                        <br>
+                        2016
+                    </a>
+                    </h4>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href="projects/dystopian/dystopian.html"><img src="images/electronics/dystopian.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                <h5 class="project-hover"><a class="font-hover" href="projects/dystopian/dystopian.html">Dystopian Places
+                    <br>
+                    2016
+                </a>
+                </h5>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center electronics">
+            <div class="project">
+                <a href="projects/eyes/eyes.html"><img src="images/electronics/eyes.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                <h4 class="project-hover"><a class="font-hover" href="projects/eyes/eyes.html">Eyes
+                    <br>
+                    2013
+                </a>
+                </h4>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href="projects/maglev/maglev.html"><img src="images/electronics/maglev.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/maglev/maglev.html">MagLev
+                        <br>
+                        2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href="projects/obsession/obsession.html"><img src="images/electronics/obsession.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/obsession/obsession.html">Obsession
+                        <br>
+                        2015
+                    </h4>
+                </a>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+                <div class="project">
+                    <a href="projects/playball/playball.html"><img src="images/electronics/playball.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                        <h4 class="project-hover"><a class="font-hover" href="projects/playball/playball.html">Playball
+                            <br>
+                            2018
+                        </h4>
+                    </a>  
+                </div> 
+            </div>
+
+        <!-- Sculpture  -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href="projects/balance/balance.html"><img src="images/sculpture/balance.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/balance/balance.html">Balance
+                        <br>
+                        2016
+                    </h4>
+                </a>      
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href="projects/bird/bird.html"><img src="images/sculpture/bird.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/bird/bird.html">Bird
+                        <br>
+                        2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href="projects/bronze/bronze.html"><img src="images/sculpture/bronze.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/bronze/bronze.html">Bronze
+                        <br>
+                        2016
+                    </h4>  
+                </a> 
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href="projects/small/small.html"><img src="images/sculpture/small.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/small/small.html">Small
+                        <br>
+                        2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                 <a href="projects/modules/modules.html"><img src="images/sculpture/triangles.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/modules/modules.html">Modules
+                        <br>
+                        2016
+                    </h4>  
+                </a>
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href="projects/wheel/wheel.html"><img src="images/sculpture/wheel.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/wheel/wheel.html">Wheel
+                        <br>
+                        2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <!-- Photography  -->
+
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href="projects/drops/drops.html"><img src="images/photography/drops.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/drops/drops.html">Drops
+                        <br>
+                        2014
+                    </h4> 
+                </a> 
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href="projects/exsnia/exsnia.html"><img href="www.google.com" src="images/photography/exsnia.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/exsnia/exsnia.html">ExSnia
+                        <br>
+                        2013
+                    </h4>  
+                </a>
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href="projects/inks/inks.html"><img src="images/photography/inks.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/inks/inks.html">Inks
+                        <br>
+                        2013
+                    </h4>  
+                </a>
+            </div> 
+        </div>
+        <!-- ITEM -->
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href="projects/yosemite/yosemite.html"><img src="images/photography/yosemite.jpg" class="img-fluid fade-image-hover" alt=" "></a>
+                    <h4 class="project-hover"><a class="font-hover" href="projects/yosemite/yosemite.html">Yosemite
+                        <br>
+                        2015
+                    </h4>  
+                </a>
+            </div> 
+        </div>
+        <!-- ITEM -->
+        
+    </div>
+    <!-- END OF GRID -->
+
+    <!-- Footer -->
+    <div id="footer"></div>
+   
+
+    </div>
+</div>
+
+<!-- SHOW HIDE PROJECTS DEPENDING ON CATEGORY -->
+<script>
+$(document).ready(function () {
+    // Hide all except electronics
+    $('#filterElectronics').click(function(e) { 
+        $('.photography').css('display', 'none');
+        $('.sculpture').css('display', 'none');
+        $('.electronics').css('display', 'block');
+    });
+    // Hide all except sculpture
+    $('#filterSculpture').click(function(e) { 
+        $('.photography').css('display', 'none');
+        $('.sculpture').css('display', 'block');
+        $('.electronics').css('display', 'none');
+    });
+    // Hide all except photography
+    $('#filterPhotography').click(function(e) { 
+        $('.photography').css('display', 'block');
+        $('.sculpture').css('display', 'none');
+        $('.electronics').css('display', 'none');
+    });
+    // Show all
+    $('#filterAll').click(function(e) { 
+        $('.photography').css('display', 'block');
+        $('.sculpture').css('display', 'block');
+        $('.electronics').css('display', 'block');
+    });
+});
+</script>
+<!-- HOVER OPACITY -->
+<script>
+    $(function() {
+        $('.project-hover').hover( function(){
+        $(this).parent().css('opacity', '0.2');
+        },
+        function(){
+            $(this).parent().css('opacity', '1');
+        });
+    });
+</script>
+
+<!-- <div id="footer"></div> -->
+</body>
+</html>
