@@ -14,6 +14,8 @@
             integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
             crossorigin="anonymous">
             </script>
+
+            
 <style>
 
 html {
@@ -190,20 +192,6 @@ body {
 
 
 
-
-<link href='https://fonts.googleapis.com/css?family=Lekton|Lobster' rel='stylesheet' type='text/css'>
-<link href="assets/YTPlayer/dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/css/jquery.mb.YTPlayer.min.css">-->
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/YTPlayer/dist/jquery.mb.YTPlayer.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/jquery.mb.YTPlayer.min.js"></script>-->
-<script src="assets/apikey.js"></script>
-
-
-
-
 <style>
 
     .photography{
@@ -315,9 +303,9 @@ body {
 
 <div class="video-wrapper">
      
-        <!-- <iframe  src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&mute=1&modestbranding=1&autohide=1&showinfo=0&ontrols=0;" allow='autoplay' frameborder='0'></iframe> -->
+        <iframe  src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&mute=1&modestbranding=1&autohide=1&showinfo=0&ontrols=0;" allow='autoplay' frameborder='0'></iframe>
         <!-- <div class="video-player mb_YTPlayer isMuted" data-property="{videoURL:'https://www.youtube.com/watch?v=1eG9r2VIp8s', containment:'.module-video', quality:'large', startAt:0, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:0, mute:true}" id="video_1559846852752" style="display: none; position: relative; background-image: none;"></div> -->
-        <div id="p1" class="player" data-property="{videoURL:'qRSPVj1ldVQ', ratio:16/9, abundance:.3, anchor:'center,center', containment:'body', showControls:true, autoPlay:true, loop:true, mute:true, opacity:1, addRaster:true, quality:'default'}"></div>
+        <!-- <div id="p1" class="player" data-property="{videoURL:'qRSPVj1ldVQ', ratio:16/9, abundance:.3, anchor:'center,center', containment:'body', showControls:true, autoPlay:true, loop:true, mute:true, opacity:1, addRaster:true, quality:'default'}"></div> -->
 </div>
 <div class="container">
 
@@ -597,17 +585,14 @@ body {
     </script>
 
 
-<script>
-    //jQuery(".player").YTPlayer();
-    
-    var videos = [{ videoURL:'koxqaR1YtJE', containment:'#wrapper', showControls:true, startAt: 0, autoPlay:true, loop:false , mute:true, opacity:1}, { videoURL:'EzKImzjwGyM', containment:'#wrapper', showControls:false, startAt: 0, autoPlay:true, loop:false , mute:true, opacity:1 }]
-    
-    jQuery(".player").YTPlaylist(videos, false, function(video){
-        console.log('Video changed', video.videoData);
-        console.log('Video:',video.id, video.opt);
-    });
+
+
+<script> $(function(){
+			$('.video-player').mb_YTPlayer();
+		});
     
 </script>
+ 
 
 
 
