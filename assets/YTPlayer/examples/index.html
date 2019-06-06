@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  jquery.mb.components
+  file: demo_domElement.html
+  last modified: 21/11/17 19.37
+  Version:  
+  Build:  
+
+  Open Lab s.r.l., Florence - Italy
+  email: matbicoc@gmail.com
+  site: 	http://pupunzi.com
+  	http://open-lab.com
+  blog: 	http://pupunzi.open-lab.com
+
+  Licences: MIT, GPL
+  http://www.opensource.org/licenses/mit-license.php
+  http://www.gnu.org/licenses/gpl.html
+
+  Copyright (c) 2001-2017. Matteo Bicocchi (Pupunzi)
+  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Lekton|Lobster' rel='stylesheet' type='text/css'>
+<link href="../dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/css/jquery.mb.YTPlayer.min.css">-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../dist/jquery.mb.YTPlayer.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/jquery.mb.YTPlayer.min.js"></script>-->
+<script src="assets/apikey.js"></script>
+
+</head>
+
+
+<style>
+
+    .photography{
+        display: none;
+    }
+    .electronics{
+        display: block;
+    }
+    .sculpture{
+        display: none;
+    }
+    .sculpture:hover{
+        display: block;
+        color:white;
+    }
+    
+    body{
+    background-color: black;
+    /* background-color: #303030; */
+    /* background-color: white; */
+    }
+    .col-lg-3{
+        padding-bottom: 30px;
+    }
+    .col-md-4 {
+        padding-bottom: 30px;
+    }
+    .col-sm-12 {
+        padding-bottom: 30px;
+    }
+    
+    
+    .font-d {
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffff3d;
+    }
+    .font-d:hover {
+        color:#ffffff9f;
+    }
+    
+    .font-hover{
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffffc7;
+    }
+    .font-hover:hover{
+        color:#ffffff;
+    }
+    .footer-padding {
+        padding-bottom: 30px;
+    }
+    .project-hover{
+        position:absolute;
+        top:30%;
+        right:0%;
+        left:0%;
+        color: white;
+        opacity:0;
+    }
+    .project:hover .project-hover{
+        background-image:  url("PlotterDesignHover.png");
+        opacity: 1;
+    }
+    .project:hover .overlay {
+        opacity: 1;
+    }
+    .fade-image-hover:hover{
+        opacity:0.2;
+    }
+
+    .video-wrapper{
+        width:100%;
+        height:450px;
+        background: black;
+        margin-bottom: 0px;
+        margin-top:20px;
+    }
+    iframe{
+        position: fixed;
+        top: -10%;
+        width:100%;
+        height:700px;
+    }
+    .hide-youtube-controls{
+        position: fixed;
+        top: -10%;
+        width:100%;
+        height:700px;
+        z-index: 99 !important;
+        background-color: white;
+        opacity: 100%;
+    }
+    body {
+      border: none;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      font: normal 16px/20px Lekton, sans-serif;
+    }
+
+    .player {
+      background: #000;
+      height: 800px;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+    }
+    
+    </style>
+<body>
+
+<div class="video-wrapper">
+     
+        <!-- <iframe  src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&mute=1&modestbranding=1&autohide=1&showinfo=0&ontrols=0;" allow='autoplay' frameborder='0'></iframe> -->
+        <!-- <div class="video-player mb_YTPlayer isMuted" data-property="{videoURL:'https://www.youtube.com/watch?v=1eG9r2VIp8s', containment:'.module-video', quality:'large', startAt:0, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:0, mute:true}" id="video_1559846852752" style="display: none; position: relative; background-image: none;"></div> -->
+        <div id="p1" class="player" data-property="{videoURL:'qRSPVj1ldVQ', ratio:16/9, abundance:.3, anchor:'center,center', containment:'body', showControls:true, autoPlay:true, loop:true, mute:true, opacity:1, addRaster:true, quality:'default'}"></div>
+    </div>
+<div class="container">
+
+    
+   
+    
+
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterElectronics">Electronics</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterSculpture">Sculpture</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterPhotography">Photography</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterAll">All</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-sm-12"><br></div>
+    </div>
+
+
+
+
+
+<div class="row">
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href=/projects/balance/><img src="img/projects/balance/balance.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/balance/">
+                    <br>
+                    Balance
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href=/projects/bird/><img src="img/projects/bird/bird.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/bird/">
+                    <br>
+                    Bird
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href=/projects/bronze/><img src="img/projects/bronze/bronze.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/bronze/">
+                    <br>
+                    Bronze
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href=/projects/drops/><img src="img/projects/drops/drops.jpg" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/drops/">
+                    <br>
+                    Drops
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href=/projects/drum/><img src="img/projects/drum/drum.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/drum/">
+                    <br>
+                    Drum
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href=/projects/dystopian/><img src="img/projects/dystopian/dystopianBW.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/dystopian/">
+                    <br>
+                    Dystopian Places
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href=/projects/exsnia/><img src="img/projects/exsnia/exsnia.jpg" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/exsnia/">
+                    <br>
+                    Exsnia
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href=/projects/inks/><img src="img/projects/inks/inks.jpg" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/inks/">
+                    <br>
+                    Inks
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href=/projects/modules/><img src="img/projects/modules/modules.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/modules/">
+                    <br>
+                    modules
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href=/projects/obsession/><img src="img/projects/obsession/obsession.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/obsession/">
+                    <br>
+                    Obsession
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href=/projects/playball/><img src="img/projects/playball/playball.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/playball/">
+                    <br>
+                    Playball
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href=/projects/plotter/><img src="img/projects/plotter/PlotterDesign.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/plotter/">
+                    <br>
+                    Plotter
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href=/projects/scrap/><img src="img/projects/small/small.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/scrap/">
+                    <br>
+                    Scrap
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center sculpture">
+            <div class="project">
+                <a href=/projects/wheel/><img src="img/projects/wheel/wheel.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/wheel/">
+                    <br>
+                    Wheel
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center photography">
+            <div class="project">
+                <a href=/projects/yosemite/><img src="img/projects/yosemite/yosemite.jpg" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/yosemite/">
+                    <br>
+                    Yosemite
+                    <br>
+                    2016
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 text-center electronics">
+            <div class="project">
+                <a href=/projects/eyes/><img src="img/projects/eyes/eyes.png" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="/projects/eyes/">
+                    <br>
+                    Eyes
+                    <br>
+                    2018
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    
+</div>
+
+
+</div>
+
+<!-- SHOW HIDE PROJECTS DEPENDING ON CATEGORY -->
+<script>
+    $(document).ready(function () {
+        // Hide all except electronics
+        $('#filterElectronics').click(function(e) { 
+            $('.photography').css('display', 'none');
+            $('.sculpture').css('display', 'none');
+            $('.electronics').css('display', 'block');
+        });
+        // Hide all except sculpture
+        $('#filterSculpture').click(function(e) { 
+            $('.photography').css('display', 'none');
+            $('.sculpture').css('display', 'block');
+            $('.electronics').css('display', 'none');
+        });
+        // Hide all except photography
+        $('#filterPhotography').click(function(e) { 
+            $('.photography').css('display', 'block');
+            $('.sculpture').css('display', 'none');
+            $('.electronics').css('display', 'none');
+        });
+        // Show all
+        $('#filterAll').click(function(e) { 
+            $('.photography').css('display', 'block');
+            $('.sculpture').css('display', 'block');
+            $('.electronics').css('display', 'block');
+        });
+    });
+    </script>
+    <!-- HOVER OPACITY -->
+    <script>
+        $(function() {
+            $('.project-hover').hover( function(){
+            $(this).parent().css('opacity', '0.2');
+            },
+            function(){
+                $(this).parent().css('opacity', '1');
+            });
+        });
+    </script>
+
+
+<script>
+    //jQuery(".player").YTPlayer();
+    
+    var videos = [{ videoURL:'koxqaR1YtJE', containment:'#wrapper', showControls:true, startAt: 0, autoPlay:true, loop:false , mute:true, opacity:1}, { videoURL:'EzKImzjwGyM', containment:'#wrapper', showControls:false, startAt: 0, autoPlay:true, loop:false , mute:true, opacity:1 }]
+    
+    jQuery(".player").YTPlaylist(videos, false, function(video){
+        console.log('Video changed', video.videoData);
+        console.log('Video:',video.id, video.opt);
+    });
+    
+</script>
+</body>
+</html>
