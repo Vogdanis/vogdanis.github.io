@@ -1,2 +1,0 @@
-# vogdanis.github.io
-Portfolio
