@@ -17,6 +17,8 @@
             <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/jquery.mb.YTPlayer.js"></script>
             <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/bootstrap.min.js"></script>
             <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/PrettyEmbed.js/jquery.prettyembed.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/jquery.mb.YTPlayer.min.css"></script>
+            
             
             
 <style>
@@ -639,7 +641,7 @@ $(function(){
 
 
 <script>
-        //jQuery(".player").YTPlayer();
+        jQuery(".player").YTPlayer();
         var videos = [{ videoURL:'ZissX1r9vVc', containment:'#wrapper', showControls:true, startAt: 0, autoPlay:true, loop:false , mute:true, opacity:1}, { videoURL:'EzKImzjwGyM', containment:'#wrapper', showControls:false, startAt: 0, autoPlay:true, loop:false , mute:true, opacity:1 }]
         jQuery(".player").YTPlaylist(videos, false, function(video){
           console.log('Video changed', video.videoData);
