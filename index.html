@@ -583,20 +583,14 @@ body {
     
 </script> -->
 
-<script> $('#my-video-display').prettyEmbed({
-	videoID: 'aBcDeFg12345',
-	previewSize: 'hd',				// use either this option...
-	customPreviewImage: '',			// ...or this option
+<script> $(function(){
+    // if (jQuery) {
+    // alert("jquery is loaded");
+    // } else {
+    //     alert("Not loaded");
+    // }
 
-	// Embed controls
-	showInfo: false,
-	showControls: true,
-	loop: false,
-
-	colorScheme: 'dark',
-	showRelated: false,
-
-	useFitVids: true
+  $().prettyEmbed({ useFitVids: true });
 });
 </script>
 
