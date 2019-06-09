@@ -9,12 +9,8 @@
             <!-- Fonts -->
             <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
             <!-- Fonts End -->
-            <script
-            src="https://code.jquery.com/jquery-3.4.0.min.js"
-            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-            crossorigin="anonymous">
-            </script>
-
+            <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+            <script src="assets/js/PrettyEmbed.js/jquery.prettyembed.min.js"></script>
             
 <style>
 
@@ -294,8 +290,8 @@ body {
 
 <div class="video-wrapper">
 
-        <iframe src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&controls=0&mute=1&showinfo=0&loop=1;" allow='autoplay'  frameborder='0'></iframe>
-     
+        <!-- <iframe src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&controls=0&mute=1&showinfo=0&loop=1;" allow='autoplay'  frameborder='0'></iframe> -->
+        <div class="pretty-embed" data-pe-videoid="ZissX1r9vVc" data-pe-fitvids="true"></div>
         <!-- <iframe  src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&mute=1&loop=1&modestbranding=1&autohide=1&showinfo=0&ontrols=0;" allow='autoplay' frameborder='0'></iframe> -->
         <!-- <div class="video-player mb_YTPlayer isMuted" data-property="{videoURL:'https://www.youtube.com/watch?v=1eG9r2VIp8s', containment:'.module-video', quality:'large', startAt:0, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:0, mute:true}" id="video_1559846852752" style="display: none; position: relative; background-image: none;"></div> -->
         <!-- <div id="p1" class="player" data-property="{videoURL:'qRSPVj1ldVQ', ratio:16/9, abundance:.3, anchor:'center,center', containment:'body', showControls:true, autoPlay:true, loop:true, mute:true, opacity:1, addRaster:true, quality:'default'}"></div> -->
@@ -580,13 +576,17 @@ body {
 
 
 
-
+<!-- 
 <script> $(function(){
 			$('.video-player').mb_YTPlayer();
 		});
     
+</script> -->
+
+<script> $(function(){
+  $().prettyEmbed({ useFitVids: true });
+});
 </script>
- 
 
 
 
