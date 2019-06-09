@@ -597,7 +597,28 @@ body {
     //     alert("Not loaded");
     // }
 
-  $().prettyEmbed({ useFitVids: true });
+//   $().prettyEmbed({ useFitVids: true });
+
+
+  $('#my-video-display').prettyEmbed({
+	videoID: 'aBcDeFg12345',
+	previewSize: 'hd',				// use either this option...
+	customPreviewImage: '',			// ...or this option
+
+	// Embed controls
+	showInfo: false,
+	showControls: true,
+	loop: false,
+
+	colorScheme: 'dark',
+	showRelated: false,
+
+	useFitVids: true
+});
+
+
+
+
 });
 </script>
 
