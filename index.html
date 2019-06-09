@@ -624,7 +624,12 @@ body {
 
 <script>
 $( window ).resize(function() {
-  console.log(document.getElementById("my-video-display").style.height);
+ // console.log($('#my-video-display').height() );
+  var videoFrameHeight = $('#my-video-display').height();
+  console.log(videoFrameHeight);
+  $('.video-wrapper').height(videoFrameHeight - 200);
+
+  //console.log($('video-wrapper').height() );
 });
 </script>
 
