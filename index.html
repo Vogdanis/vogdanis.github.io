@@ -584,6 +584,12 @@ body {
 </script> -->
 
 <script> $(function(){
+    if (jQuery) {
+    alert("jquery is loaded");
+    } else {
+        alert("Not loaded");
+    }
+
   $().prettyEmbed({ useFitVids: true });
 });
 </script>
