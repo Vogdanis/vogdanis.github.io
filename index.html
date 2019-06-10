@@ -318,7 +318,7 @@ body {
     /* background: url('img/logo2.png') 50% 40% no-repeat rgb(0, 0, 0); */
     background: black;
     /* display: none; */
-    opacity: 0.9;
+    opacity: 1;
     }  
     .pageloaderText {
     position: relative;
@@ -631,6 +631,48 @@ body {
     });
 </script>
 
+
+<script>
+        var fadeInLogoDelayDesktop = 1500;
+        var fadeInLogoDelayMobile = 1000;
+
+        var pageloaderTextDesktop = 4000;
+        var pageloaderTextMobile = 1500;
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            console.log("device detected");
+            $(".loader-logo").css("width","150px");
+            $(".loader-logo").css("height","150px");
+            $(".pageloaderText").css("font-size","1em");
+            $(".pageloader").show();
+            $(".playerBox").hide();
+
+
+            $(".loader-logo").fadeTo(2000,0.8);
+            $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
+            window.setTimeout(clearPageLoader,pageloaderTextMobile);
+        }
+        else{
+            console.log("Browser detected");
+            $(window).on("load", function (e) { 
+                var myPlayer = jQuery(".player").YTPlayer();
+                $(".container").hide();
+                $(".loader-logo").fadeTo(1500,0.8);
+                $(".pageloaderText").fadeTo(4000,0.5);
+                window.setTimeout(clearPageLoader,pageloaderTextDesktop);
+            }); 
+        }
+
+
+
+        function clearPageLoader(){
+         $(".pageloader").fadeOut(2000); 
+         $(".container").show();
+
+    }
+</script>
+
+
 <!-- HOVER OPACITY -->
 <script>
     $(function() {
@@ -646,36 +688,26 @@ body {
 
 
 <!-- YTplayer and LOADER -->
-<script type="text/javascript"> $(window).on("load", function (e) { 
-    var myPlayer = jQuery(".player").YTPlayer();
-    $(".container").hide();
-    $(".loader-logo").fadeTo(1500,0.8);
-    $(".pageloaderText").fadeTo(4000,0.5);
-    window.setTimeout(clearPageLoader,4000);
+<!-- <script type="text/javascript"> 
+    $(window).on("load", function (e) { 
+        var myPlayer = jQuery(".player").YTPlayer();
+        $(".container").hide();
+        $(".loader-logo").fadeTo(1500,0.8);
+        $(".pageloaderText").fadeTo(4000,0.5);
+        window.setTimeout(clearPageLoader,pageloaderTextDesktop);
     }); 
-</script> 
+</script>  -->
 
-<script>
+<!-- <script>
     function clearPageLoader(){
          $(".pageloader").fadeOut(2000); 
          $(".container").show();
 
     }
-</script>
+</script> -->
 
 
-<script>
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- console.log("device detected");
- $(".loader-logo").css("width","150px");
- $(".loader-logo").css("height","150px");
- $(".pageloaderText").css("font-size","1em");
- $(".playerBox").hide();
-}
-else{
-    console.log("Browser detected");
-}
-</script>
+
 
 
 
