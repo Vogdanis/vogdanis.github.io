@@ -316,15 +316,27 @@ body {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: url('images/yourLoaderImage.gif') 50% 50% no-repeat rgb(249, 249, 249);
-    opacity: .8;
-    }   
+    background: url('img/logo2.png') 50% 40% no-repeat rgb(0, 0, 0);
+    /* display: none; */
+    opacity: 9;
+    }  
+    .pageloaderText {
+    position: fixed;
+    color: white;
+    left: 35%;
+    top: 58%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    font-size: 3em;
+    display:none;
+    }    
 
 
     </style>
 
 <div class="pageloader">
-    <h1>Works by Yiannis Vogdanis</h1>
+    <h1 class="pageloaderText font-d">Yiannis Vogdanis</h1>
 </div>
 <!-- <iframe id="my-video-display" src="https://www.youtube.com/embed/ZissX1r9vVc?autoplay=1&controls=0&mute=1&showinfo=0&loop=1;"></div> -->
 
@@ -604,77 +616,39 @@ body {
             $('.electronics').css('display', 'block');
         });
     });
-    </script>
-    <!-- HOVER OPACITY -->
-    <script>
-        $(function() {
-            $('.project-hover').hover( function(){
-            $(this).parent().css('opacity', '0.2');
-            },
-            function(){
-                $(this).parent().css('opacity', '1');
-            });
+</script>
+
+<!-- HOVER OPACITY -->
+<script>
+    $(function() {
+        $('.project-hover').hover( function(){
+        $(this).parent().css('opacity', '0.2');
+        },
+        function(){
+            $(this).parent().css('opacity', '1');
         });
-    </script>
-
-
-
-
-<!-- 
-
-<script> 
-$(function(){
-  $('#my-video-display').prettyEmbed({
-	videoID: 'ZissX1r9vVc',
-	previewSize: 'hd',				// use either this option...
-	customPreviewImage: '',			// ...or this option
-
-	// Embed controls
-	showInfo: false,
-	showControls: false,
-    loop: true,
-    auto: true,
-
-	colorScheme: 'dark',
-	showRelated: false,
-
-	useFitVids: false
-});
-});
+    });
 </script>
 
-<script>
-$(function(){
-    $(document).ready(function(){
-        $('#my-video-display').trigger('click');
-    });
-});
-</script>
- -->
 
 
-<!-- 
-<script>
-    $(window).ready(function(){
-        function play(){
-            jQuery(".player").YTPlayer();
-        }
-    });
-</script> -->
-
-<!-- <script>
-setTimeout(function(){ 
-    console.log("Timeout fired.");
-    jQuery(".player").YTPlayer();
-}, 100);
-</script> -->
-
-
+<!-- YTplayer and LOADER -->
 <script type="text/javascript"> $(window).on("load", function (e) { 
     jQuery(".player").YTPlayer();
-    $(".pageloader").fadeOut(4000); 
+    $(".container").hide();
+    $(".pageloaderText").fadeIn(3000);
+    window.setTimeout(clearPageLoader,4000);
     }); 
 </script> 
+
+<script>
+    function clearPageLoader(){
+         $(".pageloader").fadeOut(2000); 
+         $(".container").show();
+
+    }
+</script>
+
 
 
 
