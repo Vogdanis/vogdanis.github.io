@@ -204,8 +204,8 @@ body {
 
 <style>
 #image_container{
-    width:110px;
-    height:110px;
+    width:100%;
+    height:100%;
     text-align: center;
     /* background-image: url('../../img/projects/eyes/mati.png'); */
 }   
@@ -213,17 +213,28 @@ body {
 #eye_image{
     width:100px;
     height:100px;
-    /* left:0px; */
-    right:0px;
+  
 }
+#eye_image_banner{
+   position:absolute;
+   top:20px;
+    display:none;
+}
+
 </style>
 
 <div id="image_container">
     <img id="eye_image" src="../../img/projects/eyes/mati.png" alt="">
+    
 </div>
 
 
+<img id="eye_image_banner" src="../../img/projects/eyes/eye-banner-1.png" class="img-fluid" alt="Responsive image">
+<!-- <img id="eye_image_banner" src="../../img/projects/eyes/eye-banner-1.png" alt=""> -->
 
+
+
+<!-- LOADING ANIMATION -->
 <script>
 window.onload = function(e){
     var window_width = $( document ).width();
@@ -236,14 +247,52 @@ window.onload = function(e){
     console.log(image_width);
   
     $("#image_container").animate({
-        "height": 220,
+        "height": 240,
     }, 1500 );
 
     $("#eye_image").animate({
-        "width": 200,
-        "height": 200,
+        "width": 240,
+        "height": 240,
     }, 1500 );
+
+    $("#eye_image").fadeOut(1800);
+    
+    setTimeout(function(){ 
+        $("#eye_image").hide();
+        // $('#image_container').hide();
+        $("#eye_image_banner").fadeIn(1500);
+    }, 1500);
 }
+</script>
+
+<!-- CHANGE BANNER ON HOVER -->
+<script>
+$(document).mousemove(function(e) {
+    window.x = e.pageX;
+    window.y = e.pageY;
+    console.log(e.pageY);
+    var mouseMinimumY = 700;
+
+   var window_width = $( document ).width();
+   var thirdWidth = window_width / 3;
+
+if(e.pageX < thirdWidth && e.pageY < mouseMinimumY){
+    console.log("1");
+    $("#eye_image_banner").attr("src","../../img/projects/eyes/eye-banner-1.png");
+}
+if(e.pageX >= thirdWidth && e.pageX < thirdWidth * 2 && e.pageY < mouseMinimumY){
+    console.log("2");
+    $("#eye_image_banner").attr("src","../../img/projects/eyes/eye-banner-2.png");
+}
+if(e.pageX > thirdWidth * 2 && e.pageY < mouseMinimumY){
+    console.log("3");
+    $("#eye_image_banner").attr("src","../../img/projects/eyes/eye-banner-3.png");
+}
+});
+
+
+
+
 </script>
 
 
