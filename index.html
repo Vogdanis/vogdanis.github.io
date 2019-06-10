@@ -318,7 +318,7 @@ body {
     z-index: 9999;
     background: url('img/logo2.png') 50% 40% no-repeat rgb(0, 0, 0);
     /* display: none; */
-    opacity: 9;
+    opacity: 0.9;
     }  
     .pageloaderText {
     position: fixed;
@@ -636,7 +636,7 @@ body {
 <script type="text/javascript"> $(window).on("load", function (e) { 
     jQuery(".player").YTPlayer();
     $(".container").hide();
-    $(".pageloaderText").fadeIn(3000);
+    $(".pageloaderText").fadeTo(3000,0.5);
     window.setTimeout(clearPageLoader,4000);
     }); 
 </script> 
