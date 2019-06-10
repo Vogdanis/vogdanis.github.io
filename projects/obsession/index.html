@@ -203,7 +203,72 @@ body {
 
 
 
+<style>
+ 
+    body{
+    background-color: black;
+    /* background-color: #303030; */
+    /* background-color: white; */
+    }
+    .col-lg-3{
+        padding-bottom: 30px;
+    }
+    .col-md-4 {
+        padding-bottom: 30px;
+    }
+    .col-sm-12 {
+        padding-bottom: 30px;
+    }
+    
+    
+    .font-d {
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffff61;
+    }
+    .font-d:hover {
+        color:#ffffff9f;
+    }
+    
+    .font-hover{
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffffc7;
+    }
+    .font-hover:hover{
+        color:#ffffff;
+    }
+    .footer-padding {
+        padding-bottom: 30px;
+    }
+    .playerBox {
+      background:black;
+      height: 800px;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      margin-top: -200px;
+      margin-bottom: 100px;
+    }
 
+    </style>
+
+
+
+    <div class="playerBox" id="v1" style="background: #0000;"></div>
+    <div id="p1" class="player" data-property="{videoURL:'h5xD5TAROxs',containment:'#v1',useOnMobile:true, showControls:false, autoPlay:true, loop:true, mute:true, startAt:35, stopAt:63, opacity:1, addRaster:true, quality:'default', playOnlyIfVisible: false}"></div>
+
+
+
+<script type="text/javascript"> $(window).on("load", function (e) { 
+    jQuery(".player").YTPlayer();
+    $(".pageloader").fadeOut(4000); 
+    }); 
+</script> 
 
 
 
