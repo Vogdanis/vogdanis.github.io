@@ -646,19 +646,17 @@ body {
             $(".pageloaderText").css("font-size","1em");
             $(".pageloader").show();
             $(".playerBox").hide();
-
-
             $(".loader-logo").fadeTo(2000,0.8);
             $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
             window.setTimeout(clearPageLoader,pageloaderTextMobile);
         }
         else{
-            console.log("Browser detected");
+            console.log("desktop detected");
             $(window).on("load", function (e) { 
                 var myPlayer = jQuery(".player").YTPlayer();
                 $(".container").hide();
-                $(".loader-logo").fadeTo(1500,0.8);
-                $(".pageloaderText").fadeTo(4000,0.5);
+                $(".loader-logo").fadeTo(fadeInLogoDelayDesktop,0.8);
+                $(".pageloaderText").fadeTo(pageloaderTextDesktop,0.5);
                 window.setTimeout(clearPageLoader,pageloaderTextDesktop);
             }); 
         }

@@ -202,6 +202,49 @@ body {
 
 
 
+<style>
+#image_container{
+    width:110px;
+    height:110px;
+    text-align: center;
+    /* background-image: url('../../img/projects/eyes/mati.png'); */
+}   
+
+#eye_image{
+    width:100px;
+    height:100px;
+    /* left:0px; */
+    right:0px;
+}
+</style>
+
+<div id="image_container">
+    <img id="eye_image" src="../../img/projects/eyes/mati.png" alt="">
+</div>
+
+
+
+<script>
+window.onload = function(e){
+    var window_width = $( document ).width();
+    console.log($( document ).width());
+    $("#image_container").width(window_width);
+    $("#image_container").height(window_width);
+    $("#eye_image").width(window_width);
+    $("#eye_image").height(window_width);
+    var image_width = document.getElementById("eye_image").offsetWidth;
+    console.log(image_width);
+  
+    $("#image_container").animate({
+        "height": 220,
+    }, 1500 );
+
+    $("#eye_image").animate({
+        "width": 200,
+        "height": 200,
+    }, 1500 );
+}
+</script>
 
 
 
