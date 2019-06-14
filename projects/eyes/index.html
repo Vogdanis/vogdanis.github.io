@@ -147,6 +147,14 @@ body {
 .font-footer:hover {
     color:#ffffff9f;
 }
+.title {
+    font-family: "dosis", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-top: 10px;
+    color:#ffffff3d;
+
+}
 </style>
 
 </head>
@@ -169,19 +177,16 @@ body {
 
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
-                <!-- <div class="bg-dark p-4">
-                    <h4 class="text-white">Collapsed content</h4>
-                    <span class="text-muted">Toggleable via the navbar brand.</span>
-                    </div> -->
+        </div>
 
-            </div>
-            <nav class="navbar text-center navbar-fixed-bottom">
-                <button class="navbar-toggler" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon myButton"></span> -->
-                    <span class="img-fluid"><img class="myButton" src="../../img/logo2.png"></span>
-                </button>
-            </nav>
-            </div>
+        <nav class="navbar text-center navbar-fixed-bottom">
+            <button class="navbar-toggler" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon myButton"></span> -->
+                <span class="img-fluid"><img class="myButton" src="../../img/logo2.png"></span>
+            </button>
+        </nav>
+        <!-- <h4 class="text-white text-center title">Title</h4> -->
+        </div>
     </div>
 
 
@@ -231,20 +236,24 @@ body {
 .blockquote {
     font-size: 2em;
     margin: 10px;
-    padding: 50px 20px;
+    padding: 20px 50px;
     color:#fff9;
     text-align:center;
+    opacity:0;
 }
 
 .main-text{
     font-family: "Dosis", sans-serif;
     color:white;
-    text-transform: uppercase;
+    font-size: 1.5em;
+  /*  text-transform: uppercase;*/
     letter-spacing: 3px;
-    padding-top: 50px;
+    padding-top: 20px;
     margin:30px;
 }
-
+.project-body{
+    opacity:0;
+}
 </style>
 
 <div id="image_container">
@@ -257,10 +266,15 @@ body {
 
 <!-- <div class="title font-d">Preception</div> -->
 
-<div class="blockquote">“Since we cannot change reality, let us change the eyes which see it.” <br> Nikos Kazantzakis  </div>
+<div class="blockquote">“Since we cannot change reality, let us change the eyes which see it.” <br><h5 class="text-center"> Nikos Kazantzakis</h5>  </div>
+<div class="row project-body">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
 
-<div class="main-text"> I want to remind that vision, one of our senses can sometimes deceive us. We tend to blindly trust our eyes but do they always say the truth? <br> Through this project and with the help of what scientists call persistance of vision (POV) I will show you that your eyes can deceive you. </div> 
-
+        <div class="main-text"> I want to remind that vision, one of our senses, can sometimes deceive us. We tend to blindly trust our eyes but do they always say the truth? <br> Through this project and with the help of what scientists call persistance of vision (POV) I will show you that your eyes can deceive you. </div> 
+    </div>    
+    <div class="col-sm-2"></div>
+</div>
 
 
 
@@ -285,17 +299,28 @@ window.onload = function(e){
         "height": 240,
     }, 1500 );
 
-    $("#eye_image").fadeOut(1800);
+    $("#eye_image").fadeOut(1000);
     
     setTimeout(function(){ 
         $("#eye_image").hide();
         // $('#image_container').hide();
         $("#eye_image_banner").fadeIn(1500);
     }, 1500);
-        
+    //Hide animation eye    
     setTimeout(function(){ 
         $('#image_container').hide();
     }, 1500);
+    //Show Quote
+    setTimeout(function(){ 
+        $('.blockquote').fadeTo(5000,1);
+    }, 1500);
+    //Show rest of body
+    setTimeout(function(){ 
+        $('.project-body').fadeTo(7000,1);
+    }, 5000);
+
+
+
 }
 </script>
 
@@ -304,7 +329,7 @@ window.onload = function(e){
 $(document).mousemove(function(e) {
     window.x = e.pageX;
     window.y = e.pageY;
-    console.log(e.pageY);
+
     var mouseMinimumY = 900;
 
    var window_width = $( document ).width();
