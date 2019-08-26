@@ -192,10 +192,16 @@ body {
 
 <script>
     function openNav() {
+        var slidesExit = document.getElementById("slides");
+        if(slidesExit){slidesExit.style.opacity = "0";}
+        //document.getElementById("slides").style.opacity = "0";
         document.getElementById("myNav").style.height = "100%";
     }
 
     function closeNav() {
+        var slidesExit = document.getElementById("slides");
+        if(slidesExit){slidesExit.style.opacity = "1";}
+        //document.getElementById("slides").style.opacity = "1";
         document.getElementById("myNav").style.height = "0%";
     }
 </script>
