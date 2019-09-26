@@ -220,6 +220,13 @@ body {
 
 
 
+<head>
+<!-- Fotorama from CDNJS, 19 KB -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</head>
+
+
 <style>
  
     body{
@@ -284,12 +291,23 @@ body {
         margin-bottom:20px;    
     }
 
-    iframe{
-        width:100%;
-        height:500px;
-        margin-top:30px;
+
+    .text-title{
+      /* font-family: "Dosis", sans-serif; */
+      font-family: 'Roboto Mono', monospace;
+      color: rgb(232, 230, 230)!important; 
+      opacity: 0.9; 
+      font-size: calc(100% + 2vw + 2vh); 
     }
 
+    .font-text{
+      opacity: 0.8;
+      font-size: 1.3em;
+    }
+
+    .fotorama{
+        padding-top:70px;
+    }
     </style>
 
 
@@ -305,32 +323,45 @@ body {
 </script> 
 
 <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8 text-light">
-        <div class="title">Playball</div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 text-light">
+        <div class="text-title">Playball</div>
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8 text-light">
-        Playball is an interactive installation that calls viewers to action. It was a project we developed with my classmates while doing our masters at IAAC. Playball uses light to create interactions between the viewer and installation, and between viewers themselves. By hitting one ball to another, light is passed on, allowing light to take on the playful nature of balls. A new typology of the ball now acts as an icon of potential energy and potential play, while masking any preconceived symbolism of light.
-
-        Ball sizes are loosely based on common sports ball sizes making them feel familiar and approachable. The distribution is organized (from the outside-in) from bigger to smaller, creating an artificial “cavernous” feel. The larger balls on the outsides are the most reachable and initialize the chain reaction. Smaller balls in the middle are organized on a secondary grid to create more density, while also hanging higher to avoid being grabbed. 
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 font-text">
+        Playball is an interactive installation that calls viewers to action. It was a project we developed with my classmates while doing our masters at IAAC. Playball uses light to create interactions between the viewer and installation, and between viewers themselves. By hitting one ball to another, light is passed on, allowing light to take on the playful nature of balls. 
     </div>
-    <div class="col-sm-2"></div>
+    <div class="col-sm-1"></div>
 
 
-
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8 text-light">
-        <img class="img-fluid img-custom" src="../../img/projects/playball/playball.jpg">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 font-text">
+The distribution is organized (from the outside-in) from bigger to smaller, creating an artificial “cavernous” feel. The larger balls on the outsides are the most reachable and initialize the chain reaction. Smaller balls in the middle are organized on a secondary grid to create more density, while also hanging higher to avoid being grabbed. 
     </div>
-    <div class="col-sm-2"></div>
+    <div class="col-sm-1"></div>
 
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8 text-light">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10" align="center">
+        <!-- Add images to <div class="fotorama"></div> -->
+        <div class="fotorama"  data-allowfullscreen="true"data-loop="true" data-autoplay="true">
+          <img src="../../img/projects/playball/1.jpg">
+          <img src="../../img/projects/playball/2.jpg">
+          <img src="../../img/projects/playball/3.jpg">
+          <img src="../../img/projects/playball/4.jpg">
+          <img src="../../img/projects/playball/5.jpg">
+          <img src="../../img/projects/playball/6.jpg">
+          <img src="../../img/projects/playball/7.jpg">
+          <img src="../../img/projects/playball/8.jpg">
+        </div>
     </div>
-    <div class="col-sm-2"></div>
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 text-light">
+    </div>
+    <div class="col-sm-1"></div>
 </div>
 
 
