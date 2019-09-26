@@ -243,7 +243,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   color: rgb(232, 230, 230)!important; 
   opacity: 0.9; 
-  font-size: 6em;
+  font-size: 5em;
 }
 
 .text-subtitle{
@@ -253,45 +253,171 @@ body {
   font-size: 2.5em;
 }
 
+.img-map{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.playerBox {
+  background:white;
+  height: 500px;
+  width: 100%;
+  /*margin-bottom: 100px;*/
+}
+
+/*  // YOUTUBE PLAYER    */
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+    padding-top:120px;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
+}
+
 </style>
 
-  <div class="row">
-    <!-- <div class="col-lg-12 text-center text-title">DYSTOPIAN PLACES</div> -->
-    <div class="col-lg-6 text-left">
-      <div class="text-title-container">
-         <div class="text-title">DYSTOPIAN PLACES</div>
-         <div class="text-subtitle">Feel what your planet feels.</div>
-      </div>
-    </div>
-    <div class="col-lg-6 font-text">
-      <img src="../../img/projects/dystopian/Mask-trans2.png" class="img-fluid">
-    </div>
+<div class="row">
+<!-- <div class="col-lg-12 text-center text-title">DYSTOPIAN PLACES</div> -->
+<div class="col-lg-6 text-left">
+  <div class="text-title-container">
+     <div class="text-title">DYSTOPIAN PLACES</div>
+     <div class="text-subtitle">Feel what your planet feels.</div>
   </div>
+</div>
+<div class="col-lg-6 font-text">
+  <img src="../../img/projects/dystopian/Mask-trans2.png" class="img-fluid">
+</div>
+</div>
 
-  <div class="row">
-    <div class="col-lg-12 text-center"><img src="../../img/projects/dystopian/banner.png" class="img-fluid" alt=""></div>
-    <div class="col-lg-12"><h4 class="text-subtitle text-center">Dystopian Places is a simulation designed to make you feel uncomfortable.</h4></div>
+<div class="row">
+<div class="col-lg-12 text-center"><img src="../../img/projects/dystopian/banner.png" class="img-fluid" alt=""></div>
+<div class="col-lg-12"><h4 class="text-subtitle text-center">Dystopian Places is a simulation designed to make you feel uncomfortable.</h4></div>
+</div>
+
+<div class="row">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10 font-text">
+      Human development has brought us to where we are today, but not without its consequences. One of the many repercussions of our actions, is a phenomenon called water hypoxia. 
+      
+      Water hypoxia is defined as a detrimental decrease in the oxygen levels of a body of water. Areas with extreme hypoxia are commonly known as ‘dead zones’ due to colossal die-offs. Although the process can be of natural occurance, the severity in which hypoxia is affecting our waters today is a result of irresponsible human development. 
+      
+      Dystopian Places invites users to attempt to breathe in a hypoxic area. The simulation is composed of two main parts: a mask and a virtual map. 
   </div>
+  <div class="col-lg-1"></div>
 
-  <div class="row">
-      <div class="col-lg-1"></div>
-      <div class="col-lg-10 font-text">
-          Human development has brought us to where we are today, but not without its consequences. One of the many repercussions of our actions, is a phenomenon called water hypoxia. 
-          
-          Water hypoxia is defined as a detrimental decrease in the oxygen levels of a body of water. Areas with extreme hypoxia are commonly known as ‘dead zones’ due to colossal die-offs. Although the process can be of natural occurance, the severity in which hypoxia is affecting our waters today is a result of irresponsible human development. 
-          
-          Dystopian Places invites users to attempt to breathe in a hypoxic area. The simulation is composed of two main parts: a mask and a virtual map. The mask restricts the airflow the wearer is receiving. The reduction in air intake mimics the oxygen deprivation of a selected area on the map. The human wearing the mask will then understand what it would be like to be a fish living in an area with water hypoxia. 
-          
-          Dystopian Places hopes to be a piece of the puzzle in moving towards a more environmentally conscious world. We are at point where action needs to be taken at a large scale, and sometimes, we need to feel to understand.
-      </div>
-      <div class="col-lg-1"></div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10"><img src="../../img/projects/dystopian/map1.png" class="img-fluid img-map" alt=""></div>
+  <div class="col-lg-1"></div>
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10 font-text">
+      The mask restricts the airflow the wearer is receiving. The reduction in air intake mimics the oxygen deprivation of a selected area on the map. The human wearing the mask will then understand what it would be like to be a fish living in an area with water hypoxia. 
+      
+      Dystopian Places hopes to be a piece of the puzzle in moving towards a more environmentally conscious world. We are at point where action needs to be taken at a large scale, and sometimes, we need to feel to understand.
     </div>
-  
+  <div class="col-lg-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+<!--      <div class="playerBox" id="v1" style="background: #0000;"></div>
+<div id="p1" class="player" data-property="{videoURL:'ClmSuncslRw',containment:'#v1',useOnMobile:true, showControls:true, autoPlay:true, mute:true, startAt:0,opacity:1, quality:'default', playOnlyIfVisible: false}"></div>  -->
+<div class="youtube-player" data-id="ClmSuncslRw"></div>
+    <div class="col-lg-1"></div>
+</div>
 
 
+<!--
+<script type="text/javascript"> $(window).on("load", function (e) { 
+    jQuery(".player").YTPlayer();
+    }); 
+</script> 
+-->
+<script>
 
+    /* Light YouTube Embeds by @labnol */
+    /* Web: http://labnol.org/?p=27941 */
 
+    document.addEventListener("DOMContentLoaded",
+        function() {
+            var div, n,
+                v = document.getElementsByClassName("youtube-player");
+            for (n = 0; n < v.length; n++) {
+                div = document.createElement("div");
+                div.setAttribute("data-id", v[n].dataset.id);
+                div.innerHTML = labnolThumb(v[n].dataset.id);
+                div.onclick = labnolIframe;
+                v[n].appendChild(div);
+            }
+        });
 
+    function labnolThumb(id) {
+        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+    }
+
+</script>
 
 
 
