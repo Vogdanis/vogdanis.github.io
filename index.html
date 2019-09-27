@@ -568,41 +568,54 @@ body {
 
 
 <script>
-        var fadeInLogoDelayDesktop = 1500;
-        var fadeInLogoDelayMobile = 1000;
 
-        var pageloaderTextDesktop = 2000;
-        var pageloaderTextMobile = 1500;
-
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            console.log("device detected");
-            $(".loader-logo").css("width","150px");
-            $(".loader-logo").css("height","150px");
-            $(".pageloaderText").css("font-size","1em");
-            $(".pageloader").show();
-            $(".playerBox").hide();
-            $(".loader-logo").fadeTo(2000,0.8);
-            $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
-            window.setTimeout(clearPageLoader,pageloaderTextMobile);
-        }
-        else{
-            console.log("desktop detected");
-            $(window).on("load", function (e) { 
-                var myPlayer = jQuery(".player").YTPlayer();
-                $(".container").hide();
-                $(".loader-logo").fadeTo(fadeInLogoDelayDesktop,0.8);
-                $(".pageloaderText").fadeTo(pageloaderTextDesktop,0.5);
-                window.setTimeout(clearPageLoader,pageloaderTextDesktop);
-            }); 
-        }
-
-
-
-        function clearPageLoader(){
-         $(".pageloader").fadeOut(2000); 
-         $(".container").fadeIn(3000);
-
+$(document).ready(function(){
+    var isshow = localStorage.getItem('isshow');
+    if ( isshow == null ){
+        localStorage.setItem('isshow' , 1);
+        console.log("first visit");
+        logoPopup();
     }
+    else{
+        clearPageLoader();
+    }
+});
+
+function logoPopup(){
+
+    var fadeInLogoDelayDesktop = 1500;
+    var fadeInLogoDelayMobile = 1000;
+
+    var pageloaderTextDesktop = 2000;
+    var pageloaderTextMobile = 1500;
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log("device detected");
+        $(".loader-logo").css("width","150px");
+        $(".loader-logo").css("height","150px");
+        $(".pageloaderText").css("font-size","1em");
+        $(".pageloader").show();
+        $(".playerBox").hide();
+        $(".loader-logo").fadeTo(2000,0.8);
+        $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
+        window.setTimeout(clearPageLoader,pageloaderTextMobile);
+    }
+    else{
+        console.log("desktop detected");
+        $(window).on("load", function (e) { 
+            var myPlayer = jQuery(".player").YTPlayer();
+            $(".container").hide();
+            $(".loader-logo").fadeTo(fadeInLogoDelayDesktop,0.8);
+            $(".pageloaderText").fadeTo(pageloaderTextDesktop,0.5);
+            window.setTimeout(clearPageLoader,pageloaderTextDesktop);
+        }); 
+    }
+}
+
+function clearPageLoader(){
+     $(".pageloader").fadeOut(2000); 
+     $(".container").fadeIn(3000);
+}
 </script>
 
 
