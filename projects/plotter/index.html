@@ -225,11 +225,12 @@ body {
     .playerBox {
       position: relative;
       background:black;
-      width:100%;
-      height: 75%;
+      width:560px !important;
+      height: 720px !important;
       display: inline-block;
-      margin-top: 50px;
-      /*margin-bottom: 100px;*/
+      left:calc(100% / 2 - 280px);
+      margin-top:0px !important;
+      margin-left:0px !important;
     }
 
     .player{
@@ -267,6 +268,8 @@ body {
         margin: auto;
         max-width: 100%;
         width: 100%;
+        max-width: 100%;
+        width: 100%;
         position: absolute;
         right: 0;
         top: 0;
@@ -294,6 +297,17 @@ body {
         cursor: pointer;
     }
 
+    .main-text{
+    font-family: "Dosis", sans-serif;
+    color:white;
+    font-size: 1em;
+  /*  text-transform: uppercase;*/
+    letter-spacing: 1px;
+    padding-top: 2px;
+    margin:30px;
+    opacity:0.6;
+}
+
 </style>
 
 
@@ -302,9 +316,9 @@ body {
 
 <div class="playerBox" id="v1" style="background: #0000;"></div>
 <div id="p1" class="player" data-property="{videoURL:'Ye_aAHbxuWY',containment:'#v1',useOnMobile:true, showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default', playOnlyIfVisible: false}"></div>
-
-
-
+<p class="main-text">I find the flow of information utterly fascinating. From its source to its final destination, information is channeled through a multiplicity of mediums continuously being transformed along the way. The simplest example to illustrate the above is communication through speech: an initial idea is transformed into a sound wave that travels trough the air and is received by a human ear. Consequently, the ear drum vibrates and produces an electrical signal that is finally decoded by the brain.</p>
+<p class="main-text">This plotter was a personal exploration to further investigate the digital and mechanical flow of information. To plot a simple drawing from the computer the geometries have to become coordinates. Then, these coordinates become electrical signals that drive motors which create mechanical movements and in turn draw the once digital image.I find it beautiful when I imagine how information changes forms (digital, electrical, mechanical) only to remain intact. What makes this plotter stand out is the way that the mechanical force is transmitted.</p>
+<p class="main-text">The “head” that holds the pen is magnetic allowing whole mechanism to be hidden behind a dark piece of glass that acts like a drawing surface. The only thing that is visible to us is the paper and the “head” that magically dances and creates our image. Another thing that makes this machine different from traditional printers are the slight imperfections in the transmission of the mechanical movement. This makes every print unique, giving it a “natural” touch almost as if the plotter had a character of its own.</p>
 
 <script>
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
