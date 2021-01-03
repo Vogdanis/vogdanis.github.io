@@ -331,15 +331,22 @@ body {
         display:block;
     }    
     .loader-logo-position{
-        position: fixed;
+        /* position: fixed; */
+        padding-top: 100px;
         text-align: center;
-        top:35%;
+        top:20%;
         width: 100%;
-        height: 300px;
+    }
+    .loader-logo-position-Binary-Ceramics{
+        /* position: relative; */
+        text-align: center;
+        top:50%;
+        width: 100%;
+        opacity: 0.9;
     }
     .loader-logo{
-        width:200px;
-        height:200px;
+        width:150px;
+        height:150px;
         opacity: 0;
     }
     
@@ -363,7 +370,7 @@ body {
 
     #slides {
         position: relative;
-        width: calc(100%);
+        width:100%; 
         height: 600px; 
         top:-140px;
         padding: 0px;
@@ -374,7 +381,7 @@ body {
     .slide {
         position: absolute;
         top: 0px;
-        width: 105%;
+        width: 100%;
         height:600px;
         opacity: 0;
         z-index: 1;
@@ -416,13 +423,28 @@ body {
        background-position: center !important;
     } 
 
-
+    .font-loader-text{
+        font-family: "Dosis", sans-serif;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffff61;
+        /* position:absolute; */
+        /* padding-top: 50px; */
+        text-align: center;
+    }
     </style>
 
 <div class="pageloader">
+    <h1 class="loader-header-text font-d font-loader-text">
+        Choose website to continue.
+    </h1>
     <div class="loader-logo-position">
-            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre">
-            <h1 class="pageloaderText font-d">Yiannis Vogdanis</h1>
+            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.vogdanis.com/index.html'">
+            <h1 class="pageloaderText font-d" onclick="window.location='https://www.vogdanis.com/index.html'">Yiannis Vogdanis</h1>
+    </div>
+    <div class="loader-logo-position-Binary-Ceramics">
+        <img src="img/LogoBC.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.binaryceramics.com/'">
+        <h1 class="pageloaderText font-d" onclick="window.location='https://www.binaryceramics.com/'">BinaryCeramics</h1>
     </div>
 </div>
 
@@ -567,19 +589,18 @@ body {
     });
 </script>
 
-
 <script>
 //Check if guest is visiting for the first time and if yes show logo animation
 $(document).ready(function(){
-    var isshow = localStorage.getItem('isshow');
-    if ( isshow == null ){
-        localStorage.setItem('isshow' , 1);
-        console.log("first visit");
+    // var isshow = localStorage.getItem('isshow');
+    // if ( isshow == null ){
+    //     localStorage.setItem('isshow' , 1);
+    //     console.log("first visit");
         logoPopup();
-    }
-    else{
-        clearPageLoader();
-    }
+    // }
+    // else{
+    //     clearPageLoader();
+    // }
 });
 
 function logoPopup(){
@@ -614,8 +635,8 @@ function logoPopup(){
 }
 
 function clearPageLoader(){
-     $(".pageloader").fadeOut(2000); 
-     $(".container").fadeIn(3000);
+    //  $(".pageloader").fadeOut(2000); 
+    //  $(".container").fadeIn(3000);
 }
 </script>
 
