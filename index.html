@@ -439,8 +439,8 @@ body {
         Choose website to continue.
     </h1>
     <div class="loader-logo-position">
-            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.vogdanis.com/index.html'">
-            <h1 class="pageloaderText font-d" onclick="window.location='https://www.vogdanis.com/index.html'">Yiannis Vogdanis</h1>
+            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="clearPageLoader();">
+            <h1 class="pageloaderText font-d" onclick="clearPageLoader();">Yiannis Vogdanis</h1>
     </div>
     <div class="loader-logo-position-Binary-Ceramics">
         <img src="img/LogoBC.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.binaryceramics.com/'">
@@ -620,7 +620,7 @@ function logoPopup(){
         $(".playerBox").hide();
         $(".loader-logo").fadeTo(2000,0.8);
         $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
-        window.setTimeout(clearPageLoader,pageloaderTextMobile);
+        //window.setTimeout(clearPageLoader,pageloaderTextMobile);
     }
     else{
         console.log("desktop detected");
@@ -629,7 +629,7 @@ function logoPopup(){
             $(".container").hide();
             $(".loader-logo").fadeTo(fadeInLogoDelayDesktop,0.8);
             $(".pageloaderText").fadeTo(pageloaderTextDesktop,0.5);
-            window.setTimeout(clearPageLoader,pageloaderTextDesktop);
+            //window.setTimeout(clearPageLoader,pageloaderTextDesktop);
         }); 
     }
 }
@@ -637,6 +637,8 @@ function logoPopup(){
 function clearPageLoader(){
     //  $(".pageloader").fadeOut(2000); 
     //  $(".container").fadeIn(3000);
+      $(".pageloader").fadeOut(2000); 
+      $(".container").fadeIn(3000);
 }
 </script>
 
