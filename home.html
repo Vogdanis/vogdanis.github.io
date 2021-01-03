@@ -1,0 +1,404 @@
+---
+layout: layouts/base.html
+---
+
+<style>
+
+    .photography{
+        display: none;
+    }
+    .electronics{
+        display: block;
+    }
+    .sculpture{
+        display: none;
+    }
+    .sculpture:hover{
+        display: block;
+        color:white;
+    }
+    
+    body{
+    background-color: black;
+    /* background-color: #303030; */
+    /* background-color: white; */
+    }
+    .col-lg-3{
+        padding-bottom: 30px;
+    }
+    .col-md-4 {
+        padding-bottom: 30px;
+    }
+    .col-sm-12 {
+        padding-bottom: 30px;
+    }
+    
+    
+    .font-d {
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffff61;
+    }
+    .font-d:hover {
+        color:#ffffff9f;
+    }
+    
+    .font-hover{
+        font-family: "Dosis", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffffc7;
+    }
+    .font-hover:hover{
+        color:#ffffff;
+    }
+    .footer-padding {
+        padding-bottom: 30px;
+    }
+    .project-hover{
+        position:absolute;
+        top:30%;
+        right:0%;
+        left:0%;
+        color: white;
+        opacity:0;
+    }
+    .project:hover .project-hover{
+        background-image:  url("PlotterDesignHover.png");
+        opacity: 1;
+    }
+    .project:hover .overlay {
+        opacity: 1;
+    }
+    .fade-image-hover:hover{
+        opacity:0.2;
+    }
+
+    .playerBox {
+      background:black;
+      height: 1000px;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      margin-top: -200px;
+      margin-bottom: 100px;
+    }
+    
+    .pageloader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        /* background: url('img/logo2.png') 50% 40% no-repeat rgb(0, 0, 0); */
+        background: black;
+        /* display: none; */
+        opacity: 1;
+    }  
+    .pageloaderText {
+        position: relative;
+        color: white;
+        text-align: center;
+        /* top: 58%;  */
+        margin-top: 20px;
+        width: 100%;
+        height: 100px;
+        z-index: 9999;
+        font-size: 2em;
+        opacity: 0;
+        display:block;
+    }    
+    .loader-logo-position{
+        /* position: fixed; */
+        padding-top: 100px;
+        text-align: center;
+        top:20%;
+        width: 100%;
+    }
+    .loader-logo-position-Binary-Ceramics{
+        /* position: relative; */
+        text-align: center;
+        top:50%;
+        width: 100%;
+        opacity: 0.9;
+    }
+    .loader-logo{
+        width:150px;
+        height:150px;
+        opacity: 0;
+    }
+    
+
+    .banner-top{
+    width:100%;
+    height:600px;
+    background-color:#A9A9A9;
+    position:relative;
+    top:-140px;
+    }
+    .container{
+    position:relative;
+    top:-140px;
+    }
+
+    /*
+       essential styles:
+       these make the slideshow work
+       */
+
+    #slides {
+        position: relative;
+        width:100%; 
+        height: 600px; 
+        top:-140px;
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height:600px;
+        opacity: 0;
+        z-index: 1;
+
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s;
+    }
+
+    .showing {
+        opacity: 1;
+        z-index: 2;
+    }
+    .slide:nth-of-type(1) {
+       background-image: url("img/banner/1.jpg");
+       background-repeat: no-repeat;
+       background-position: center !important;
+
+    }
+    .slide:nth-of-type(2) {
+       background-image: url("img/banner/2.jpg");
+       background-repeat: no-repeat;
+       background-position: center !important;
+    }
+    .slide:nth-of-type(3) {
+       background-image: url("img/banner/3.jpg");
+       background-repeat: no-repeat;
+       background-position: center !important;
+    }
+    .slide:nth-of-type(4) {
+       background-image: url("img/banner/4.jpg");
+       background-repeat: no-repeat;
+       background-position: center !important;
+    }
+    .slide:nth-of-type(5) {
+       background-image: url("img/banner/5.jpg");
+       background-repeat: no-repeat;
+       background-position: center !important;
+    } 
+
+    .font-loader-text{
+        font-family: "Dosis", sans-serif;
+        letter-spacing: 3px;
+        padding-top: 10px;
+        color:#ffffff61;
+        /* position:absolute; */
+        /* padding-top: 50px; */
+        text-align: center;
+    }
+    </style>
+
+<div class="pageloader">
+    <h1 class="loader-header-text font-d font-loader-text">
+        Choose website to continue.
+    </h1>
+    <div class="loader-logo-position">
+            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="clearPageLoader();">
+            <h1 class="pageloaderText font-d" onclick="clearPageLoader();">Yiannis Vogdanis</h1>
+    </div>
+    <div class="loader-logo-position-Binary-Ceramics">
+        <img src="img/LogoBC.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.binaryceramics.com/'">
+        <h1 class="pageloaderText font-d" onclick="window.location='https://www.binaryceramics.com/'">BinaryCeramics</h1>
+    </div>
+</div>
+
+
+
+<!--
+<div class="playerBox" id="v1" style="background: #0000;"></div>
+<div id="p1" class="player" data-property="{videoURL:'_XUMkSpRBBY',containment:'#v1',
+                                            useOnMobile:true, showControls:false, autoPlay:true, 
+                                            loop:true, mute:true, startAt:11, opacity:1, 
+                                            addRaster:true, quality:'default', playOnlyIfVisible: false,
+                                            mobileFallbackImage:'img/logo2.png'
+                                            }"></div>  
+ stopAt:100
+-->
+<!--<div class="banner-top">Gallery Placeholder</div>-->
+<ul id="slides" >
+    <div class="row text-center">
+        <li class="slide showing img-fluid" alt="Responsive image"></li> <!-- 1 --> 
+        <li class="slide img-fluid" alt="Responsive image"></li> <!-- 2 --> 
+        <li class="slide img-fluid" alt="Responsive image"></li> <!-- 3 --> 
+        <li class="slide img-fluid" alt="Responsive image"></li> <!-- 4 --> 
+        <li class="slide img-fluid" alt="Responsive image"></li> <!-- 5 --> 
+    </div>
+</ul>
+
+<div class="container">
+<!--    <div class="row text-center">
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterElectronics">Electronics</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterSculpture">Sculpture</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterPhotography">Photography</div>
+        <div class="col-xs-12 col-sm-6 col-md-3 font-d" id="filterAll">All</div>
+    </div>
+-->
+    <div class="row">
+        <div class="col-xs-sm-12"><br></div>
+    </div>
+
+
+
+
+
+<div class="row">
+    {% for project in collections.projects %}
+        <div class="col-lg-4 col-md-4  col-sm-6  col-xs-12 text-center {{ project.data.category }}">
+            <div class="project">
+                <a href={{ config.siteUrl }}{{ project.url }}><img src="{{ project.data.indexImage }}" class="img-fluid fade-image-hover" alt=" ">
+                    <h4 class="project-hover"><a class="font-hover" href="{{project.url}}">{{project.title}}
+                    <br>
+                    {{ project.data.title }}
+                    <br>
+                    {{ project.data.date }}
+                    </h4>
+                </a>  
+            </div> 
+        </div>    
+    {% endfor %}
+</div>
+
+
+</div>
+
+<!-- SHOW HIDE PROJECTS DEPENDING ON CATEGORY -->
+<script>
+    $(document).ready(function () {
+        // Hide all except electronics
+        $('#filterElectronics').click(function(e) { 
+            $('.photography').css('display', 'none');
+            $('.sculpture').css('display', 'none');
+            $('.electronics').css('display', 'block');
+        });
+        // Hide all except sculpture
+        $('#filterSculpture').click(function(e) { 
+            $('.photography').css('display', 'none');
+            $('.sculpture').css('display', 'block');
+            $('.electronics').css('display', 'none');
+        });
+        // Hide all except photography
+        $('#filterPhotography').click(function(e) { 
+            $('.photography').css('display', 'block');
+            $('.sculpture').css('display', 'none');
+            $('.electronics').css('display', 'none');
+        });
+        // Show all
+        $('#filterAll').click(function(e) { 
+            $('.photography').css('display', 'block');
+            $('.sculpture').css('display', 'block');
+            $('.electronics').css('display', 'block');
+        });
+    });
+</script>
+
+<script>
+//Check if guest is visiting for the first time and if yes show logo animation
+var firtvisit = 0;
+$(document).ready(function(){
+    // var isshow = localStorage.getItem('isshow');
+    // if ( isshow == null ){
+    //     localStorage.setItem('isshow' , 1);
+    //     console.log("first visit");
+    // if(firtvisit == 0){
+    //     logoPopup();
+    // }
+    // }
+    // else{
+    //     clearPageLoader();
+    // }
+});
+
+function logoPopup(){
+
+    var fadeInLogoDelayDesktop = 1500;
+    var fadeInLogoDelayMobile = 1000;
+
+    var pageloaderTextDesktop = 2000;
+    var pageloaderTextMobile = 1500;
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log("device detected");
+        $(".loader-logo").css("width","150px");
+        $(".loader-logo").css("height","150px");
+        $(".pageloaderText").css("font-size","1em");
+        $(".pageloader").show();
+        $(".playerBox").hide();
+        $(".loader-logo").fadeTo(2000,0.8);
+        $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
+        //window.setTimeout(clearPageLoader,pageloaderTextMobile);
+    }
+    else{
+        console.log("desktop detected");
+        $(window).on("load", function (e) { 
+            var myPlayer = jQuery(".player").YTPlayer();
+            $(".container").hide();
+            $(".loader-logo").fadeTo(fadeInLogoDelayDesktop,0.8);
+            $(".pageloaderText").fadeTo(pageloaderTextDesktop,0.5);
+            //window.setTimeout(clearPageLoader,pageloaderTextDesktop);
+        }); 
+    }
+}
+
+function clearPageLoader(){
+    //  $(".pageloader").fadeOut(2000); 
+    //  $(".container").fadeIn(3000);
+      $(".pageloader").fadeOut(2000);
+      $(".loader-header-text").fadeOut(2000);
+      $(".container").fadeIn(3000);
+      firtvisit = 1; 
+}
+</script>
+
+
+<!-- HOVER OPACITY -->
+<script>
+    $(function() {
+        $('.project-hover').hover( function(){
+        $(this).parent().css('opacity', '0.2');
+        },
+        function(){
+            $(this).parent().css('opacity', '1');
+        });
+    });
+</script>
+
+<script>
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,6000);
+
+function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+</script>
