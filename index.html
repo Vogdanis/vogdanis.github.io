@@ -221,11 +221,11 @@ layout: layouts/base.html
         Choose website to continue.
     </h1>
     <div class="loader-logo-position">
-            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="clearPageLoader();">
-            <h1 class="pageloaderText font-d" onclick="clearPageLoader();">Yiannis Vogdanis</h1>
+            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.vogdanis.com/home.html'">
+            <h1 class="pageloaderText font-d" onclick="window.location='https://www.vogdanis.com/home.html'">Yiannis Vogdanis</h1>
     </div>
     <div class="loader-logo-position-Binary-Ceramics">
-        <img src="img/LogoBC.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.binaryceramics.com/'">
+        <img src="img/LogoBC.png" class="loader-logo" alt="Cinque Terre2" onclick="window.location='https://www.binaryceramics.com/'">
         <h1 class="pageloaderText font-d" onclick="window.location='https://www.binaryceramics.com/'">BinaryCeramics</h1>
     </div>
 </div>
@@ -371,9 +371,7 @@ function clearPageLoader(){
     //  $(".pageloader").fadeOut(2000); 
     //  $(".container").fadeIn(3000);
       $(".pageloader").fadeOut(2000);
-      $(".loader-header-text").fadeOut(2000);
       $(".container").fadeIn(3000);
-      firtvisit = 1; 
 }
 </script>
 
