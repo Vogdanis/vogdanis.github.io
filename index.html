@@ -6,21 +6,11 @@
             <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
             <!-- Fonts End -->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
-            <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
-            <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  -->
-
-            <!-- <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/bootstrap.min.css"></script> -->
            
-            <!-- <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/jquery-3.3.1.slim.min.js"></script>
-            <script src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js'></script> -->
-
-             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-            <!-- <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/jquery.mb.YTPlayer.min.css"></script> -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/jquery.mb.YTPlayer.min.js"></script>
             <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/bootstrap.min.js"></script>
-            <!-- <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/PrettyEmbed.js/jquery.prettyembed.min.js"></script> -->
            
             
             
@@ -35,82 +25,6 @@ body {
     padding-top: 1em;
     background-color:black;
 }
-
-.overlay {
-    height: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #ffffff;
-} 
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-.navbar-inner {
-    background:transparent;
-}   
-
-    @media screen and (max-height: 450px) {
-        .overlay a {font-size: 20px}
-        .overlay .closebtn {
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
-    }
-}
-
-.navbar-toggler{
-    margin:0px;
-    /* border:black;
-    background-color:black; */
-}
-
-.myButton{
-    display:block;
-    height:100px;
-    width:100px;
-
-}
-.navbar {
-    position:fixed !important;
-    z-index: 99 !important;
-
-}
-
-.menu-container{
-    height:120px;
-}
-
 
 /* END OF MENU STYLES */
 
@@ -170,36 +84,6 @@ body {
 
 
 <style>
-
-    .photography{
-        display: none;
-    }
-    .electronics{
-        display: block;
-    }
-    .sculpture{
-        display: none;
-    }
-    .sculpture:hover{
-        display: block;
-        color:white;
-    }
-    
-    body{
-    background-color: black;
-    /* background-color: #303030; */
-    /* background-color: white; */
-    }
-    .col-lg-3{
-        padding-bottom: 30px;
-    }
-    .col-md-4 {
-        padding-bottom: 30px;
-    }
-    .col-sm-12 {
-        padding-bottom: 30px;
-    }
-    
     
     .font-d {
         font-family: "Dosis", sans-serif;
@@ -222,24 +106,7 @@ body {
     .font-hover:hover{
         color:#ffffff;
     }
-    .footer-padding {
-        padding-bottom: 30px;
-    }
-    .project-hover{
-        position:absolute;
-        top:30%;
-        right:0%;
-        left:0%;
-        color: white;
-        opacity:0;
-    }
-    .project:hover .project-hover{
-        background-image:  url("PlotterDesignHover.png");
-        opacity: 1;
-    }
-    .project:hover .overlay {
-        opacity: 1;
-    }
+  
     .fade-image-hover:hover{
         opacity:0.2;
     }
@@ -291,18 +158,6 @@ body {
     }
     
 
-    .banner-top{
-    width:100%;
-    height:600px;
-    background-color:#A9A9A9;
-    position:relative;
-    top:-140px;
-    }
-    .container{
-    position:relative;
-    top:-140px;
-    }
-
     .font-loader-text{
         font-family: "Dosis", sans-serif;
         letter-spacing: 3px;
@@ -335,18 +190,12 @@ body {
 
 <script>
 //Check if guest is visiting for the first time and if yes show logo animation
-$(document).ready(function(){
-    // var isshow = localStorage.getItem('isshow');
-    // if ( isshow == null ){
-    //     localStorage.setItem('isshow' , 1);
-    //     console.log("first visit");
-        logoPopup();
-    // }
-    // else{
-    //     clearPageLoader();
-    // }
-});
 
+// $(document).ready(function(){
+//         logoPopup();
+// });
+</script>
+<script>
 function logoPopup(){
 
     var fadeInLogoDelayDesktop = 1500;
@@ -382,5 +231,9 @@ function clearPageLoader(){
     //  $(".pageloader").fadeOut(2000); 
     //  $(".container").fadeIn(3000);
 }
+</script>
+
+<script>
+    $( window ).on( "load", logoPopup());
 </script>
 
