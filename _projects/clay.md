@@ -6,32 +6,40 @@ order: 1
 featured: true
 year: "2018–19"
 disciplines: [Ceramics, Machines, Research]
-summary: Designing my own extruder, electronics and toolpaths to print porcelain and stoneware, the research that became BinaryCeramics.
+summary: A simple, portable paste extruder of my own design, built to print clay on any machine. The research became BinaryCeramics.
 meta:
   - [Context, "IAAC, Barcelona → studio, Athens"]
-  - [System, "Custom ram extruder, control electronics, generated toolpaths"]
-  - [Material, "Stoneware and porcelain"]
+  - [System, "Paste extruder from 3D-printed parts and standard hardware"]
+  - [Control, "Direct G-code from the printer, or a custom PCB"]
+  - [Runs on, "Delta printers, industrial robot arms"]
   - [Became, "<a href='/binaryceramics/'>BinaryCeramics</a>"]
 hero: clay/lattice
 hero_video: clay-lattice
 ai_motion: true
 glyph: glyph/clay
 gallery:
+  - [pf/clay/046, "Printing on a delta printer"]
+  - [pf/clay/048, ""]
   - [clay/spikes, ""]
+  - [pf/clay/047, ""]
   - [clay/tube, ""]
+  - [pf/clay/052, "Two columns, one print"]
   - [clay/top, "Looking down into a printed vessel"]
   - [clay/layers, "Layer lines, the trace of the machine"]
-  - [clay/extruder, "Extruder prototype"]
+  - [pf/clay/049, ""]
+  - [pf/clay/050, ""]
+  - [pf/clay/044, "Extruder v16, CAD model"]
   - [clay/ram-extruder, "Ram extruder, CAD model"]
+  - [clay/extruder, "Extruder prototype"]
+  - [pf/clay/054, "Custom control board, layout"]
   - [clay/pcb, "Control electronics"]
   - [clay/cactus, ""]
-  - [clay/texture, ""]
   - [clay/wire, "Toolpath preview"]
 ---
 These pots were produced with a system I designed for my ongoing research on 3D clay printing.
 
-Clay came into my practice through the machine. During my master's at IAAC in Barcelona in 2018 I started extruding paste instead of plastic, and soon found that off-the-shelf tools weren't enough: to control the surface, I had to control the extrusion. So I began building my own, starting with a ram extruder, the electronics that drive it, and the software that turns a rule into one continuous line of clay.
+The goal was to create a simple and portable system for depositing clay or other paste-like materials. The extruder uses 3D-printed parts and standard hardware components that can be sourced easily. It can be controlled in two ways: directly with G-code, connected to the hardware of the printer, or independently with a custom PCB.
 
-The textures in these vessels come from the toolpath itself: small, deliberate movements of the nozzle as the wall climbs, layer after layer. Clay also pushes back. It slumps, it shrinks and it cracks, and that resistance is what made the material interesting to me.
+Connecting it directly to the printer is often desirable because it makes it possible to change the speed and feed rate or to do retraction moves. With the custom PCB, the system can be used where interfering with the hardware is not desirable or easy, for example when printing with an industrial robotic arm.
 
 This research became the foundation of my studio, [BinaryCeramics](/binaryceramics/).

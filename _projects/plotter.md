@@ -11,10 +11,22 @@ meta:
   - [Type, "Magnetically coupled pen plotter"]
   - [Surface, "Dark glass drawing bed, hidden mechanism"]
   - [Output, "Unique prints, never two identical"]
-hero: plotter/design
+hero: pf/plotter/121
 glyph: glyph/plotter
 youtube: Ye_aAHbxuWY
 gallery:
+  - [pf/plotter/136, "First words"]
+  - [pf/plotter/106, "Plot"]
+  - [pf/plotter/138, "Plot"]
+  - [pf/plotter/139, "Plot"]
+  - [pf/plotter/141, "The machine behind the glass"]
+  - [pf/plotter/142, "Carriage and motors"]
+  - [pf/plotter/144, ""]
+  - [pf/plotter/110, ""]
+  - [pf/plotter/120, "The magnetic head"]
+  - [pf/plotter/124, "CAD model"]
+  - [pf/plotter/127, "CAD model, exploded"]
+  - [plotter/design, ""]
   - [plotter/rail, "Early motion tests"]
 ---
 I find the flow of information utterly fascinating. From its source to its final destination, information is channelled through many media and keeps being transformed along the way. The simplest example is speech: an idea is transformed into a sound wave that travels through the air and reaches a human ear. The eardrum vibrates and produces an electrical signal, which the brain finally decodes.

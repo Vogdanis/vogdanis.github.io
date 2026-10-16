@@ -82,7 +82,7 @@
   /* ---- archive: filter + floating preview ---- */
   const filters = $('[data-filters]');
   if (filters) {
-    const rows = $$('[data-archive] .arch__row');
+    const rows = $$(filters.dataset.target || '[data-archive] .arch__row');
     filters.addEventListener('click', (e) => {
       const b = e.target.closest('button'); if (!b) return;
       $$('button', filters).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));

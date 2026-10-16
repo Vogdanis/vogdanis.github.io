@@ -8,7 +8,6 @@ jsonld: >-
 ---
 {%- assign projects = site.projects | sort: "order" -%}
 {%- assign selected = projects | where: "featured", true -%}
-{%- assign archive = projects | where_exp: "p", "p.featured != true" -%}
 
 <section class="hero" aria-label="Introduction">
   <canvas class="hero__canvas" data-toolpath aria-hidden="true"></canvas>
@@ -71,16 +70,26 @@ jsonld: >-
   </div>
 </section>
 
-<!-- ================= 10 SELECTED WORK ================= -->
+<!-- ================= 10 WORK ================= -->
 <section class="section work" id="work" aria-labelledby="work-title">
   <div class="wrap section__head">
-    <p class="kicker mono"><span class="kicker__idx">10</span> Selected work</p>
-    <h2 class="visually-hidden" id="work-title">Selected work</h2>
-    <p class="section__note mono">{{ selected | size }} projects · machines, installations, objects</p>
+    <p class="kicker mono"><span class="kicker__idx">10</span> Work</p>
+    <h2 class="visually-hidden" id="work-title">Work</h2>
+    <div class="filters mono" role="group" aria-label="Filter work" data-filters data-target="[data-works] .w">
+      {%- assign n_el = selected | where_exp: "p", "p.disciplines contains 'Electronics'" | size -%}
+      {%- assign n_sc = selected | where_exp: "p", "p.disciplines contains 'Sculpture'" | size -%}
+      {%- assign n_ph = selected | where_exp: "p", "p.disciplines contains 'Photography'" | size -%}
+      <button type="button" aria-pressed="true" data-filter="*">All <sup>{{ selected | size }}</sup></button>
+      <button type="button" aria-pressed="false" data-filter="Electronics">Electronics <sup>{{ n_el }}</sup></button>
+      <button type="button" aria-pressed="false" data-filter="Sculpture">Sculpture <sup>{{ n_sc }}</sup></button>
+      <button type="button" aria-pressed="false" data-filter="Photography">Photography <sup>{{ n_ph }}</sup></button>
+    </div>
   </div>
-  <div class="works wrap">
+  <div class="works wrap" data-works>
     {%- for p in selected %}
-    <article class="w reveal {% cycle 'w--a', 'w--b', 'w--c' %}">
+    {%- assign hm = site.data.media[p.hero] -%}
+    {%- assign hr = hm.width | times: 1.0 | divided_by: hm.height -%}
+    <article class="w reveal {% cycle 'w--a', 'w--b', 'w--c' %}{% unless p.hero_video %}{% if hr < 0.95 %} w--port{% endif %}{% endunless %}" data-tags="{{ p.disciplines | join: ',' }}">
       <a class="w__link" href="{{ p.url }}" data-cursor-label="Open">
         <div class="w__media">
           {%- if p.hero_video -%}
@@ -100,36 +109,6 @@ jsonld: >-
     </article>
     {%- endfor %}
   </div>
-</section>
-
-<!-- ================= 11 ARCHIVE ================= -->
-<section class="section archive" id="archive" aria-labelledby="archive-title">
-  <div class="wrap section__head">
-    <p class="kicker mono"><span class="kicker__idx">11</span> Archive</p>
-    <h2 class="visually-hidden" id="archive-title">Archive</h2>
-    <div class="filters mono" role="group" aria-label="Filter archive" data-filters>
-      <button type="button" aria-pressed="true" data-filter="*">All</button>
-      <button type="button" aria-pressed="false" data-filter="Sculpture">Sculpture</button>
-      <button type="button" aria-pressed="false" data-filter="Photography">Photography</button>
-      <button type="button" aria-pressed="false" data-filter="Kinetic">Kinetic</button>
-    </div>
-  </div>
-  <ol class="arch wrap" role="list" data-archive>
-    {%- for p in archive %}
-    {%- assign g = site.data.media[p.hero] %}
-    <li class="arch__row" data-tags="{{ p.disciplines | join: ',' }}">
-      <a href="{{ p.url }}" data-peek="/media/{{ p.hero }}-{{ g.w | first }}.webp" data-peek-ratio="{{ g.width }}/{{ g.height }}">
-        <span class="arch__idx mono">{{ p.idx }}</span>
-        <span class="arch__glyph" aria-hidden="true">{% include img.html key=p.glyph alt="" sizes="48px" %}</span>
-        <span class="arch__title">{{ p.title }}</span>
-        <span class="arch__sum">{{ p.summary }}</span>
-        <span class="arch__tag mono">{{ p.disciplines | join: " / " }}</span>
-        <span class="arch__arrow" aria-hidden="true">→</span>
-      </a>
-    </li>
-    {%- endfor %}
-  </ol>
-  <div class="peek" data-peek-el aria-hidden="true"><img alt=""></div>
 </section>
 
 <!-- ================= 100 PRESS ================= -->

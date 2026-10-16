@@ -10,7 +10,8 @@ summary: 64 suspended spheres, each a wireless module with collision detection a
 meta:
   - [Shown at, "LLUM BCN light festival, Barcelona"]
   - [Scale, "64 independent modules"]
-  - [Tech, "Wireless networking, collision sensing, LEDs, custom PCBs"]
+  - [Tech, "Wireless modules, sound-triggered collision detection, LEDs"]
+  - [Software, "Node.js server, MQTT, web interface for animations"]
   - [Credits, "Team project"]
 hero: playball/cloud
 hero_video: playball-drift
@@ -18,16 +19,21 @@ ai_motion: true
 glyph: glyph/playball
 youtube: fppi2PifkpE
 gallery:
+  - [pf/playball/179, ""]
+  - [pf/playball/180, ""]
+  - [pf/playball/181, ""]
   - [playball/visitors, ""]
-  - [playball/violet, ""]
-  - [playball/spheres, ""]
-  - [playball/rig, "The full grid, suspended"]
-  - [playball/warm, ""]
-  - [playball/module, "One of the 64 modules, opened"]
-  - [playball/pcbs, "Custom boards"]
-  - [playball/bench, "Assembly"]
-  - [playball/reach, ""]
+  - [pf/playball/182, ""]
+  - [pf/playball/178, ""]
+  - [pf/playball/176, "64 modules, suspended"]
+  - [pf/playball/177, ""]
+  - [pf/playball/174, "Installing"]
+  - [pf/playball/172, "Assembly"]
+  - [pf/playball/173, "Custom boards"]
+  - [pf/playball/175, "One of the 64 modules, opened"]
 ---
-Playball is an installation we developed for the LLUM light festival in Barcelona. It consists of 64 balls suspended in the air. Each ball is an independent module with full wireless connectivity, collision detection and LED lights.
+Playball is an installation we developed for the LLUM light festival in Barcelona. It consists of 64 balls suspended in the air. Each ball is an independent module with full wireless connectivity, sound-triggered collision detection and LED lights.
 
 As one ball hits another, light is passed on, revealing the playful nature of the installation.
+
+All the balls are connected to a Node.js server, with a web interface for making custom animations or watching which ball is active at any given moment. We chose MQTT as the communication protocol because it is very lightweight and offers quality of service to ensure packet delivery.

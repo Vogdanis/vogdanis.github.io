@@ -19,7 +19,7 @@ Personal site of Yiannis Vogdanis. It's a Jekyll site that GitHub Pages builds a
 
 ## Add or edit a project
 
-1. Put the original photos anywhere under `img/` (originals are never modified).
+1. Put the original photos anywhere under `img/` (originals are never modified). Anything in `img/portfolio/<project>/` is picked up automatically as `pf/<project>/<first 3 characters of the filename>`.
 2. Register each photo in `_tools/build_media.py` → `IMAGES` with a short key, e.g. `"newproject/1": "img/projects/newproject/IMG_001.jpg"`.
 3. Run `python3 _tools/build_media.py`. This writes resized WebP files to `media/` and updates `_data/media.yml`.
 4. Copy an existing file in `_projects/` (e.g. `playball.md`) and edit the front matter:

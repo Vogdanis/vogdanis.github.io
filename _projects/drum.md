@@ -6,9 +6,10 @@ order: 7
 featured: true
 year:
 disciplines: [Instrument, Electronics, Woodwork]
-summary: A touch-sensitive MIDI controller in oak and copper, small enough to travel with.
+summary: A capacitive MIDI controller in oak and copper. Eight domes sense the touch of a hand, and it is small enough to travel with.
 meta:
-  - [Type, "Touch-sensitive MIDI controller"]
+  - [Type, "Capacitive MIDI controller"]
+  - [Sensors, "8 copper domes"]
   - [Materials, "Oak, copper domes"]
   - [Mapping, "Any note or sample, assigned per dome"]
 hero: drum/angle
@@ -17,6 +18,16 @@ ai_motion: true
 glyph: glyph/drum
 youtube: Cpy00zhUPg4
 gallery:
+  - [pf/drum/162, ""]
+  - [pf/drum/163, ""]
+  - [pf/drum/166, ""]
+  - [pf/drum/171, "The back"]
+  - [pf/drum/150, "Forming the copper domes"]
+  - [pf/drum/152, "Glue-up"]
+  - [pf/drum/156, "Wiring the domes"]
+  - [pf/drum/157, "Electronics"]
   - [drum/front, ""]
 ---
-pyDrum is an interactive MIDI controller. I wanted a portable and stylish controller I could bring with me while travelling. You can assign any note or sound to each of the domes, and it is triggered when the dome is touched.
+pyDrum is an interactive controller that uses the capacitance of the human body to trigger signals. Each of the eight domes acts as a sensor which, when touched, fires a corresponding MIDI note.
+
+Through serial communication and other software, the signal can become any note or trigger an event, for example starting or stopping a song, or switching lights and lasers on and off. I wanted a portable and stylish controller I could bring with me while travelling.

@@ -9,10 +9,12 @@ layout: default
 {%- assign next_i = i | plus: 1 -%}{%- if next_i >= n -%}{%- assign next_i = 0 -%}{%- endif -%}
 {%- assign prev = group[prev_i] -%}{%- assign next = group[next_i] -%}
 
-<article class="project{% unless page.featured %} project--archive{% endunless %}">
+{%- assign hm = site.data.media[page.hero] -%}
+{%- assign hr = hm.width | times: 1.0 | divided_by: hm.height -%}
+<article class="project{% unless page.hero_video %}{% if hr < 0.95 %} project--port{% endif %}{% endunless %}">
   <header class="p-head wrap">
     <p class="crumbs mono">
-      <a href="/#{% if page.featured %}work{% else %}archive{% endif %}">{% if page.featured %}Selected work{% else %}Archive{% endif %}</a>
+      <a href="/#work">Work</a>
       <span aria-hidden="true">/</span> <span class="idx">{{ page.idx }}</span>
     </p>
     <h1 class="p-title">{{ page.title }}</h1>

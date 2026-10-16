@@ -109,6 +109,7 @@ IMAGES = {
     "balance/2": P + "balance/Gallery/2.jpg",
     "balance/3": P + "balance/Gallery/3.jpg",
     "bird/1": P + "bird/bird.jpg",
+    "bird/drawing": P + "bird/bird-drawing.jpg",
     "modules/1": P + "modules/4.jpg",
     "modules/2": P + "modules/1.jpg",
     "modules/3": P + "modules/2.jpg",
@@ -180,6 +181,13 @@ IMAGES = {
     "glyph/yosemite": P + "yosemite/yosemiteBW.png",
     "glyph/clay": P + "clay/view1-1300px.png",
 }
+
+# Originals from the Universities/Portfolio folder (exported at max 2400px) -> keys "pf/<project>/<nnn>"
+import glob as _glob
+for _f in sorted(_glob.glob(os.path.join(ROOT, "img/portfolio/*/*.jpg"))):
+    _proj = os.path.basename(os.path.dirname(_f))
+    _n = os.path.basename(_f)[:3]
+    IMAGES[f"pf/{_proj}/{_n}"] = os.path.relpath(_f, ROOT)
 
 # name: (source, max width, is_gif, start, duration)
 VIDEOS = {
