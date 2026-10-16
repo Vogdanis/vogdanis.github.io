@@ -1,0 +1,93 @@
+---
+layout: default
+---
+{%- assign all = site.projects | sort: "order" -%}
+{%- assign group = all | where: "featured", page.featured -%}
+{%- for p in group -%}{%- if p.url == page.url -%}{%- assign i = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign n = group | size -%}
+{%- assign prev_i = i | minus: 1 -%}{%- if prev_i < 0 -%}{%- assign prev_i = n | minus: 1 -%}{%- endif -%}
+{%- assign next_i = i | plus: 1 -%}{%- if next_i >= n -%}{%- assign next_i = 0 -%}{%- endif -%}
+{%- assign prev = group[prev_i] -%}{%- assign next = group[next_i] -%}
+
+<article class="project{% unless page.featured %} project--archive{% endunless %}">
+  <header class="p-head wrap">
+    <p class="crumbs mono">
+      <a href="/#{% if page.featured %}work{% else %}archive{% endif %}">{% if page.featured %}Selected work{% else %}Archive{% endif %}</a>
+      <span aria-hidden="true">/</span> <span class="idx">{{ page.idx }}</span>
+    </p>
+    <h1 class="p-title">{{ page.title }}</h1>
+    {%- if page.subtitle %}<p class="p-sub">{{ page.subtitle }}</p>{% endif %}
+  </header>
+
+  <figure class="p-hero wrap-wide" data-cursor-label="{% if page.hero_video %}Loop{% else %}View{% endif %}">
+    <div class="p-hero__frame">
+      {%- if page.hero_video -%}
+        {% include video.html name=page.hero_video alt=page.title class="p-hero__media" %}
+      {%- else -%}
+        {% include img.html key=page.hero alt=page.title class="p-hero__media" sizes="(min-width: 1400px) 1400px, 100vw" eager=true full=true %}
+      {%- endif -%}
+    </div>
+    {%- if page.ai_motion %}<figcaption class="p-note mono">Motion study generated with AI from an original photograph. The object is unchanged.</figcaption>{% endif %}
+  </figure>
+
+  <section class="p-body wrap">
+    <dl class="p-meta mono">
+      {%- if page.year %}<div><dt>Year</dt><dd>{{ page.year }}</dd></div>{% endif %}
+      <div><dt>Discipline</dt><dd>{{ page.disciplines | join: " / " }}</dd></div>
+      {%- for row in page.meta %}<div><dt>{{ row[0] }}</dt><dd>{{ row[1] }}</dd></div>{% endfor %}
+    </dl>
+    <div class="p-text prose">
+      {%- if page.quote %}
+      <blockquote class="p-quote"><p>“{{ page.quote[0] }}”</p><cite class="mono">— {{ page.quote[1] }}</cite></blockquote>
+      {%- endif %}
+      {%- assign body = content | strip -%}
+      {%- if body != "" -%}{{ content }}{%- else -%}<p class="p-lede">{{ page.summary }}</p>{%- endif -%}
+    </div>
+  </section>
+
+  {%- if page.youtube %}
+  <section class="p-film wrap-wide reveal" aria-label="Film">
+    <p class="kicker mono"><span class="kicker__idx">▶</span> Film</p>
+    {% include youtube.html id=page.youtube title=page.title %}
+    {%- if page.youtube_2 %}<div class="p-film__2">{% include youtube.html id=page.youtube_2 title=page.title %}</div>{% endif %}
+  </section>
+  {%- endif %}
+
+  {%- if page.extra_video %}
+  <figure class="p-extra wrap-wide reveal">
+    {%- assign xv = page.extra_video | first -%}{% include video.html name=xv alt=page.title class="p-extra__media" %}
+    <figcaption class="mono">{{ page.extra_video | last }}</figcaption>
+  </figure>
+  {%- endif %}
+
+  {%- if page.gallery and page.gallery.size > 0 %}
+  <section class="p-gallery wrap-wide" aria-label="Images" data-gallery>
+    {%- for g in page.gallery -%}
+      {%- assign gk = g | first -%}{%- assign gc = g | last -%}
+      {%- assign m = site.data.media[gk] -%}
+      {%- assign ratio = m.width | times: 1.0 | divided_by: m.height -%}
+      <figure class="g {% if ratio > 1.25 %}g--land{% elsif ratio < 0.85 %}g--port{% else %}g--sq{% endif %} reveal">
+        <button class="g__btn" type="button" data-lightbox>{% include img.html key=gk alt=gc sizes="(min-width: 900px) 50vw, 100vw" full=true %}</button>
+        {%- if gc != "" %}<figcaption class="mono">{{ gc }}</figcaption>{% endif %}
+      </figure>
+    {%- endfor %}
+  </section>
+  {%- endif %}
+
+  <nav class="p-next wrap" aria-label="More projects">
+    <a class="p-next__item" href="{{ prev.url }}">
+      <span class="mono dim">← Previous · {{ prev.idx }}</span>
+      <span class="p-next__title">{{ prev.title }}</span>
+    </a>
+    <a class="p-next__item p-next__item--r" href="{{ next.url }}">
+      <span class="mono dim">Next · {{ next.idx }} →</span>
+      <span class="p-next__title">{{ next.title }}</span>
+    </a>
+  </nav>
+</article>
+
+{% include lightbox.html %}
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CreativeWork","name":{{ page.title | jsonify }},"creator":{"@type":"Person","name":"Yiannis Vogdanis","url":"{{ site.url }}/"},{% if page.year %}"dateCreated":{{ page.year | jsonify }},{% endif %}"description":{{ page.summary | jsonify }},"url":"{{ site.url }}{{ page.url }}"}
+</script>

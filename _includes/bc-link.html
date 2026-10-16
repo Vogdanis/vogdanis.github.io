@@ -1,0 +1,3 @@
+{%- comment -%} Builds an outbound BinaryCeramics URL with UTM tags. include.path e.g. "/collections/tornado" {%- endcomment -%}
+{%- assign p = include.path | default: "/" -%}
+{%- if p contains "?" -%}{{ site.bc.url }}{{ p }}&amp;{{ site.bc.utm }}{%- else -%}{{ site.bc.url }}{{ p }}?{{ site.bc.utm }}{%- endif -%}

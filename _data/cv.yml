@@ -1,0 +1,28 @@
+# CV data used on /about/. Edit freely; order is top to bottom.
+exhibitions:
+  - { year: "2024", title: "Hospitality commission — Hilton, Athens", place: "BinaryCeramics · Tornado, Dash & Sea Urchin pieces for guest rooms" }
+  - { year: "2018", title: "Global Grad Show", place: "Dubai, United Arab Emirates" }
+  - { year: "2016", title: "Michalis Cacoyannis Foundation", place: "Athens, Greece" }
+  - { year: "2013", title: "Teatro India", place: "Rome, Italy" }
+  - { year: "2013", title: "Fuori Salone", place: "Milan, Italy" }
+  - { year: "2012", title: "Premio Limen Arte — special mention (Promesse) for Eyes", place: "Vibo Valentia, Calabria, Italy", link: /projects/eyes/ }
+
+education:
+  - { year: "2017–18", title: "Master in Advanced Interaction", place: "Institute for Advanced Architecture of Catalonia (IAAC), Barcelona" }
+  - { year: "2015–16", title: "Individualized program — sculpture & electronics", place: "California College of the Arts, San Francisco" }
+  - { year: "2011–14", title: "Bachelor of Arts", place: "Accademia di Belle Arti di Roma" }
+
+experience:
+  - { year: "Now", title: "Founder & artist", place: "BinaryCeramics, Athens" }
+  - { year: "2018–19", title: "Robotics developer", place: "ROMI — EU Horizon 2020 project" }
+  - { year: "2018–19", title: "Digital fabrication expert", place: "Fab Lab Barcelona" }
+  - { year: "2015–16", title: "3D technologies expert", place: "Standard Cyborg, San Francisco" }
+  - { year: "2013", title: "Circuit design, external contractor", place: "National Research Council (CNR), Rome" }
+
+toolchain:
+  - { group: "Design", items: ["Rhino / Grasshopper", "Fusion 360", "SolidWorks", "Blender"] }
+  - { group: "Code", items: ["Python", "JavaScript", "C++ / openFrameworks", "Arduino"] }
+  - { group: "Electronics", items: ["Sensors", "PCB design (Eagle, KiCad)", "Motion control"] }
+  - { group: "Fabrication", items: ["Clay 3D printing", "Custom extruders", "CNC & laser", "Lathe & metalwork", "Mould-making", "Woodwork"] }
+
+languages: ["Greek", "English", "Italian", "Spanish"]

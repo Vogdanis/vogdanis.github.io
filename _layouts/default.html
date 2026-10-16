@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+{% include head.html %}
+{%- if page.jsonld %}{{ page.jsonld }}{% endif %}
+</head>
+<body class="{{ page.body_class }}" id="top">
+<a class="skip" href="#main">Skip to content</a>
+{% include nav.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include footer.html %}
+<div class="cursor mono" data-cursor aria-hidden="true"><span></span></div>
+<script src="/assets/js/site.js?v={{ site.time | date: '%s' }}" defer></script>
+{%- if page.scripts %}{% for s in page.scripts %}
+<script src="{{ s }}?v={{ site.time | date: '%s' }}" defer></script>{% endfor %}{% endif %}
+</body>
+</html>

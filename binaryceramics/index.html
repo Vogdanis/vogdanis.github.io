@@ -1,0 +1,117 @@
+---
+title: BinaryCeramics
+body_class: page-bc
+description: BinaryCeramics is Yiannis Vogdanis's studio for computational ceramics in Athens. Forms shaped by algorithm, printed in porcelain and stoneware on printers he designs and builds.
+og: bc/tornado
+---
+<section class="bc-hero">
+  <div class="bc-hero__media">{% include video.html name="bc-tornado" alt="Close-up of a Tornado sculpture" class="bc-hero__video" %}</div>
+  <div class="bc-hero__copy wrap">
+    <p class="kicker mono"><span class="kicker__idx">01</span> Studio · Athens</p>
+    <h1 class="bc-hero__title">Binary<wbr>Ceramics</h1>
+    <p class="bc-hero__lede">Forms shaped by algorithm, made real in clay.</p>
+    <div class="btns">
+      <a class="btn btn--solid" href="{% include bc-link.html path='/collections/shop' %}" target="_blank" rel="noopener">Shop the collections <span aria-hidden="true">↗</span></a>
+      <a class="btn" href="#commission">Commissions</a>
+    </div>
+  </div>
+  <p class="bc-hero__note mono dim">AI motion study from a studio photograph</p>
+</section>
+
+<section class="section wrap bc-intro prose">
+  <p class="lede">BinaryCeramics started as research and became a studio. I wanted to understand how digital systems and physical materials could coexist in a meaningful way, and clay turned out to be the ideal opponent for a machine.</p>
+  <p>Each collection begins with a rule, a constraint or a dataset: a single continuous line, the rotation of a storm, the amplitude of a song. I don't design a final form. I design a <em>system</em> that produces forms, and each ceramic object is a snapshot of that system at one moment.</p>
+  <p>The name holds the same duality: the zero and one of code, and the balance the work tries to keep between digital and physical, machine precision and material plasticity, system and intuition.</p>
+</section>
+
+<!-- Process -->
+<section class="section" aria-labelledby="process-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">10</span> Process</p>
+    <h2 class="visually-hidden" id="process-title">Process</h2>
+    <p class="section__note mono">rule → toolpath → machine → kiln</p>
+  </div>
+  <ol class="steps wrap" role="list">
+    <li class="step reveal">
+      <div class="step__img">{% include img.html key="bc/hero-lines" alt="Fine printed layer lines on a porcelain surface" sizes="(min-width: 900px) 25vw, 100vw" %}</div>
+      <p class="step__n mono">00</p><h3>Rule</h3>
+      <p>A form begins as a constraint: one line, one rotation, one dataset. Computational design lets complex patterns emerge from very few rules.</p>
+    </li>
+    <li class="step reveal">
+      <div class="step__img">{% include img.html key="clay/wire" alt="Wireframe preview of a generated toolpath" sizes="(min-width: 900px) 25vw, 100vw" %}</div>
+      <p class="step__n mono">01</p><h3>Toolpath</h3>
+      <p>The system is written as a single continuous path for the nozzle, so the surface texture lives in the movement itself.</p>
+    </li>
+    <li class="step reveal">
+      <div class="step__img">{% include img.html key="bc/delta-printer" alt="Large delta clay printer in the Athens studio" sizes="(min-width: 900px) 25vw, 100vw" %}</div>
+      <p class="step__n mono">10</p><h3>Machine</h3>
+      <p>I design and build the printers and extruders, from a large-format delta printer to aluminium ram extruders turned on the lathe.</p>
+    </li>
+    <li class="step reveal">
+      <div class="step__img">{% include img.html key="bc/studio-batch" alt="A batch of printed vessels on a studio table" sizes="(min-width: 900px) 25vw, 100vw" %}</div>
+      <p class="step__n mono">11</p><h3>Kiln</h3>
+      <p>Drying, firing and glazing. This is where gravity, heat and chance finish what the code started.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- Machines strip -->
+<section class="section machines wrap-wide" aria-label="Machines">
+  <figure class="m m--a reveal">{% include img.html key="bc/lathe" alt="Turning an extruder part on the lathe" sizes="(min-width: 900px) 40vw, 100vw" full=true %}<figcaption class="mono">Turning extruder parts</figcaption></figure>
+  <figure class="m m--b reveal">{% include img.html key="bc/extruder-parts" alt="Extruder parts: aluminium tube, stepper motor, gearbox and nozzle" sizes="(min-width: 900px) 30vw, 100vw" full=true %}<figcaption class="mono">Ram extruder, parts</figcaption></figure>
+  <figure class="m m--c reveal">{% include img.html key="bc/extruder-hand" alt="Machined aluminium extruder body held in hand" sizes="(min-width: 900px) 25vw, 100vw" full=true %}<figcaption class="mono">Aluminium extruder body</figcaption></figure>
+  <figure class="m m--d reveal">{% include img.html key="bc/studio-glaze" alt="Spray-glazing a printed piece" sizes="(min-width: 900px) 30vw, 100vw" full=true %}<figcaption class="mono">Glazing</figcaption></figure>
+  <figure class="m m--e reveal">{% include img.html key="bc/studio-pour" alt="Pouring glaze into a spray gun" sizes="(min-width: 900px) 25vw, 100vw" full=true %}<figcaption class="mono">Preparing glaze</figcaption></figure>
+</section>
+
+<!-- Collections -->
+<section class="section" aria-labelledby="coll-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">11</span> Collections</p>
+    <h2 class="visually-hidden" id="coll-title">Collections</h2>
+    <p class="section__note mono"><a href="{% include bc-link.html path='/collections/shop' %}" target="_blank" rel="noopener">All pieces on binaryceramics.com ↗</a></p>
+  </div>
+  <div class="bcc wrap">
+    {%- for c in site.data.collections %}
+    <article class="bcc__item reveal {% cycle '', 'bcc__item--r' %}">
+      <a class="bcc__img" href="{% include bc-link.html path=c.path %}" target="_blank" rel="noopener" data-cursor-label="Shop" tabindex="-1">{% include img.html key=c.image alt=c.name sizes="(min-width: 900px) 45vw, 100vw" %}</a>
+      <div class="bcc__copy">
+        <p class="mono dim">Series {{ c.code }}</p>
+        <h3 class="h2">{{ c.name }}</h3>
+        <p class="lede">{{ c.line }}</p>
+        <p>{{ c.text }}</p>
+        <a class="btn" href="{% include bc-link.html path=c.path %}" target="_blank" rel="noopener">See {{ c.name }} <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- Commissions -->
+<section class="section commission wrap" id="commission" aria-labelledby="comm-title">
+  <div class="commission__grid">
+    <div>
+      <p class="kicker mono"><span class="kicker__idx">100</span> Commissions</p>
+      <h2 class="h2" id="comm-title">For interiors, hospitality and collectors.</h2>
+    </div>
+    <div class="prose">
+      <p>Because I build the machines, I can adapt scale, surface and finish to a project, from one-off pieces to coordinated runs.</p>
+      <div class="case reveal">
+        <p class="mono dim">2024 · Hospitality · Athens</p>
+        <h3>Hilton, guest rooms</h3>
+        <p>A production run of sculptural pieces from the Tornado, Dash and Sea Urchin series, made for the hotel's guest rooms.</p>
+      </div>
+      <a class="btn btn--solid mail" data-u="{{ site.email_user }}" data-d="{{ site.email_domain }}" data-subject="Commission enquiry" href="#contact">Start a conversation <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="bc-press-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">101</span> Press</p>
+    <h2 class="visually-hidden" id="bc-press-title">Press</h2>
+  </div>
+  <div class="wrap">{% include press.html %}</div>
+</section>
+
+{% include lightbox.html %}

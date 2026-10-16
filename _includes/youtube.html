@@ -1,0 +1,7 @@
+{%- comment -%} Privacy-friendly YouTube embed: loads the player only on click. {%- endcomment -%}
+<div class="yt" data-yt="{{ include.id }}">
+  <button class="yt__btn" type="button" aria-label="Play video: {{ include.title | escape }}">
+    <img src="https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+    <span class="yt__play mono"><span class="yt__tri" aria-hidden="true"></span>Play film</span>
+  </button>
+</div>

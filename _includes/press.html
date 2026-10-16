@@ -1,0 +1,13 @@
+<ol class="press" role="list">
+{%- for p in site.data.press -%}
+  <li class="press__item reveal">
+    <a href="{{ p.url }}" target="_blank" rel="noopener">
+      <span class="press__date mono">{{ p.date | date: "%d.%m.%Y" }}</span>
+      <span class="press__outlet">{{ p.outlet }}</span>
+      <span class="press__title"><span class="press__t" {% if p.lang == 'GR' %}lang="el"{% endif %}>{{ p.title }}</span>{% if p.title_en %}<span class="press__en">{{ p.title_en }}</span>{% endif %}</span>
+      <span class="press__tags mono">{{ p.kind }} · {{ p.lang }}{% if p.author %} · {{ p.author }}{% endif %}</span>
+      <span class="press__arrow" aria-hidden="true">↗</span>
+    </a>
+  </li>
+{%- endfor -%}
+</ol>

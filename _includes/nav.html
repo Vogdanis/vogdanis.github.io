@@ -1,0 +1,25 @@
+<header class="nav" data-nav>
+  <a class="nav__brand" href="/" aria-label="Yiannis Vogdanis, home">
+    <span class="nav__mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="28" height="28"><path d="M6 5 L12 17 L9 17 L15 27 M26 5 L19 20 M16 27 L21 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="nav__name">Yiannis Vogdanis</span>
+  </a>
+  <nav class="nav__links mono" aria-label="Main">
+    <a href="/#work" {% if page.collection == 'projects' %}aria-current="page"{% endif %}>Work</a>
+    <a href="/binaryceramics/" {% if page.url contains 'binaryceramics' %}aria-current="page"{% endif %}>BinaryCeramics</a>
+    <a href="/#press">Press</a>
+    <a href="/about/" {% if page.url contains 'about' %}aria-current="page"{% endif %}>About</a>
+    <a href="#contact" class="nav__cta">Contact</a>
+  </nav>
+  <button class="nav__toggle mono" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menu</button>
+</header>
+<div class="menu" id="menu" data-menu hidden>
+  <nav aria-label="Mobile">
+    <a href="/#work"><span class="mono">01</span>Work</a>
+    <a href="/binaryceramics/"><span class="mono">10</span>BinaryCeramics</a>
+    <a href="/#press"><span class="mono">11</span>Press</a>
+    <a href="/about/"><span class="mono">100</span>About</a>
+    <a href="#contact"><span class="mono">101</span>Contact</a>
+  </nav>
+</div>

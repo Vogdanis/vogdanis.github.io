@@ -1,0 +1,44 @@
+# BinaryCeramics collections shown on the home page and /binaryceramics/.
+# "path" is appended to https://binaryceramics.com
+- name: Tornado
+  code: T
+  image: bc/tornado
+  path: /collections/tornado
+  line: Rotation, warm and cold air, a simple rule that becomes a storm.
+  text: >-
+    A tribute to the raw power of nature and the beauty of its forms. Tornadoes are born from the
+    interaction of warm air, cold air and rotation, simple rules that give rise to some of the most
+    spectacular displays in nature.
+- name: Wave
+  code: W
+  image: bc/wave
+  path: /collections/wave
+  line: A record of waves, each set slightly different from the last.
+  text: >-
+    Watching the sea, each set of waves arrived slightly different from the last in power and frequency.
+    What if all of them could be recorded? What patterns would emerge, and what form would they take?
+- name: Dash
+  code: D
+  image: bc/dash
+  path: /collections/dash
+  line: How much complexity can a few simple rules produce?
+  text: >-
+    Four nucleotides write the code of life; the game of Go has more positions than there are atoms in
+    the observable universe. Dash investigates how computational design lets complex patterns emerge
+    from very few rules.
+- name: Intersect
+  code: I
+  image: bc/intersect
+  path: /collections/intersect
+  line: One continuous line that crosses itself into separate volumes.
+  text: >-
+    What can you do with a single curve? Each object emerges from one continuous line. Intersecting the
+    line with itself creates separate volumes, so an idea about union leads to its opposite.
+- name: Frequency
+  code: F
+  image: bc/frequency
+  path: /collections/shop
+  line: Sound, analysed and encoded into a ceramic surface.
+  text: >-
+    Part of ongoing research into how information is encoded, decoded and changes form. An algorithm
+    analyses passages of music, including frequency and amplitude, and writes them into the surface of the clay.

@@ -1,0 +1,28 @@
+{%- assign page_title = page.title | default: site.title -%}
+{%- if page.url == "/" -%}{%- assign full_title = site.title | append: " — Artist & maker, Athens" -%}{%- else -%}{%- assign full_title = page_title | append: " — " | append: site.title -%}{%- endif -%}
+{%- assign desc = page.summary | default: page.description | default: site.description | strip_newlines | strip -%}
+{%- assign og_key = page.og | default: page.hero | default: "bc/delta-printer" -%}
+{%- assign og = site.data.media[og_key] -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ desc | escape }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+<meta name="theme-color" content="#0b0b0a">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="{% if page.collection == 'projects' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ full_title | escape }}">
+<meta property="og:description" content="{{ desc | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+{%- if og %}
+<meta property="og:image" content="{{ site.url }}/media/{{ og_key }}-{{ og.w | last }}.webp">
+<meta property="og:image:width" content="{{ og.w | last }}">
+{%- endif %}
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,200..700;1,62..125,200..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
+<script>document.documentElement.classList.add('js')</script>

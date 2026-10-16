@@ -1,239 +1,161 @@
-<html>
-        <head>
-            <title>Vogdanis</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <!-- Fonts -->
-            <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet"> 
-            <!-- Fonts End -->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
-           
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.mb.ytplayer@3.2.9/dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/jquery.mb.YTPlayer.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/gh/Vogdanis/vogdanis.github.io/assets/js/bootstrap.min.js"></script>
-           
-            
-            
-            
-<style>
+---
+title: Yiannis Vogdanis
+body_class: page-home
+og: bc/delta-printer
+scripts: [/assets/js/toolpath.js]
+jsonld: >-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Yiannis Vogdanis","alternateName":"Γιάννης Βογδάνης","url":"https://vogdanis.com/","jobTitle":"Artist","homeLocation":{"@type":"Place","name":"Athens, Greece"},"founder":{"@type":"Organization","name":"BinaryCeramics","url":"https://binaryceramics.com"},"alumniOf":["Accademia di Belle Arti di Roma","California College of the Arts","Institute for Advanced Architecture of Catalonia"],"sameAs":["https://www.instagram.com/y_vogdanis/","https://www.linkedin.com/in/yiannis-vogdanis/","https://binaryceramics.com"]}</script>
+---
+{%- assign projects = site.projects | sort: "order" -%}
+{%- assign selected = projects | where: "featured", true -%}
+{%- assign archive = projects | where_exp: "p", "p.featured != true" -%}
 
-html {
-    background-color:black;
-}
-body {
-    font-family: 'Lato', sans-serif;
-    padding-top: 1em;
-    background-color:black;
-}
+<section class="hero" aria-label="Introduction">
+  <canvas class="hero__canvas" data-toolpath aria-hidden="true"></canvas>
+  <div class="hero__top mono wrap">
+    <span>Artist / Maker</span>
+    <span class="hide-s">{{ site.location }} · {{ site.coords }}</span>
+    <span><span class="dot" aria-hidden="true"></span> Athens <span data-clock>--:--</span></span>
+  </div>
+  <div class="hero__copy wrap">
+    <p class="kicker mono">Yiannis Vogdanis</p>
+    <h1 class="hero__title">I build the <em>machines</em><br> that make the work.</h1>
+    <p class="hero__lede">Computational ceramics, custom clay printers, kinetic light and interactive objects, made between craft, design and science. Founder of <a href="/binaryceramics/">BinaryCeramics</a>.</p>
+  </div>
+  <div class="hero__readout mono" data-readout aria-hidden="true">
+    <div class="hero__row"><span class="dim">FORM</span><b data-r="form">0000</b></div>
+    <div class="hero__row"><span class="dim">LAYER</span><b data-r="layer">000 / 000</b></div>
+    <div class="hero__row"><span class="dim">PATH</span><b data-r="path">0.00 m</b></div>
+    <div class="hero__gcode" data-r="gcode">G28 ; home all axes</div>
+    <button class="hero__new" type="button" data-new-form>Print a new form ↻</button>
+  </div>
+  <a class="hero__scroll mono" href="#studio" aria-label="Scroll to content"><span></span>Scroll</a>
+</section>
 
-/* END OF MENU STYLES */
-
-.font-d {
-    font-family: "Dosis", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding-top: 10px;
-}
-
-.font-text {
-    font-family: "Dosis", sans-serif;
-    /* text-transform: uppercase; */
-    letter-spacing: 3px;
-    padding-top: 10px;
-    color: white;
-}
-
-.footer-padding {
-    padding-bottom: 30px;
-}
-
-.footer-social-color {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-social-color:hover, .a-color:focus {
-  color: #e01557;
-  text-decoration: underline;
-}
-
-
-.font-footer {
-    font-family: "Dosis", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding-top: 10px;
-    color:#ffffff3d;
-}
-
-.font-footer:hover {
-    color:#ffffff9f;
-}
-.title {
-    font-family: "dosis", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding-top: 10px;
-    color:#ffffff3d;
-
-}
-</style>
-
-</head>
-<body>
-
-
-<style>
-    
-    .font-d {
-        font-family: "Dosis", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        padding-top: 10px;
-        color:#ffffff61;
-    }
-    .font-d:hover {
-        color:#ffffff9f;
-    }
-    
-    .font-hover{
-        font-family: "Dosis", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        padding-top: 10px;
-        color:#ffffffc7;
-    }
-    .font-hover:hover{
-        color:#ffffff;
-    }
-  
-    .fade-image-hover:hover{
-        opacity:0.2;
-    }
-
-    
-    .pageloader {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        /* background: url('img/logo2.png') 50% 40% no-repeat rgb(0, 0, 0); */
-        background: black;
-        /* display: none; */
-        opacity: 1;
-    }  
-    .pageloaderText {
-        position: relative;
-        color: white;
-        text-align: center;
-        /* top: 58%;  */
-        margin-top: 20px;
-        width: 100%;
-        height: 100px;
-        z-index: 9999;
-        font-size: 2em;
-        opacity: 0;
-        display:block;
-    }    
-    .loader-logo-position{
-        /* position: fixed; */
-        padding-top: 100px;
-        text-align: center;
-        top:20%;
-        width: 100%;
-    }
-    .loader-logo-position-Binary-Ceramics{
-        /* position: relative; */
-        text-align: center;
-        top:50%;
-        width: 100%;
-        opacity: 0.9;
-    }
-    .loader-logo{
-        width:150px;
-        height:150px;
-        opacity: 0;
-    }
-    
-
-    .font-loader-text{
-        font-family: "Dosis", sans-serif;
-        letter-spacing: 3px;
-        padding-top: 10px;
-        color:#ffffff61;
-        /* position:absolute; */
-        /* padding-top: 50px; */
-        text-align: center;
-    }
-
-
-    </style>
-
-<div class="pageloader">
-    <h1 class="loader-header-text font-d font-loader-text">
-        Choose website to continue.
-    </h1>
-    <div class="loader-logo-position">
-            <img src="img/logo2.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.vogdanis.com/home'">
-            <h1 class="pageloaderText font-d" onclick="window.location='https://www.vogdanis.com/home'">Yiannis Vogdanis</h1>
+<!-- ================= 01 STUDIO ================= -->
+<section class="section studio" id="studio" aria-labelledby="studio-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">01</span> Studio</p>
+    <p class="section__note mono">Athens · porcelain &amp; stoneware · since the first clay print in 2018</p>
+  </div>
+  <div class="studio__grid wrap">
+    <figure class="studio__media reveal" data-cursor-label="Studio">
+      <a href="/binaryceramics/" tabindex="-1" aria-hidden="true">{% include video.html name="bc-tornado" alt="Tornado sculpture by BinaryCeramics" class="studio__video" %}</a>
+      <figcaption class="mono dim">Tornado, terracotta. AI motion study from a studio photograph.</figcaption>
+    </figure>
+    <div class="studio__copy">
+      <h2 class="h2 reveal" id="studio-title">Binary<wbr>Ceramics</h2>
+      <p class="lede reveal">Forms shaped by algorithm, made real in clay. BinaryCeramics is my studio in Athens. I design ceramic forms as systems of rules, and I design and build the printers and extruders that make them.</p>
+      <p class="reveal">“Binary” is the zero and one behind the code, and also the tension the work lives in: digital and physical, machine precision and material plasticity, control and emergence.</p>
+      <ul class="facts mono reveal" role="list">
+        <li><span>01</span> Limited editions &amp; one-offs</li>
+        <li><span>10</span> Self-built clay printers &amp; extruders</li>
+        <li><span>11</span> Commissions for interiors &amp; hospitality</li>
+      </ul>
+      <div class="btns reveal">
+        <a class="btn btn--solid" href="/binaryceramics/">Inside the studio <span aria-hidden="true">→</span></a>
+        <a class="btn" href="{% include bc-link.html path='/collections/shop' %}" target="_blank" rel="noopener">Shop the collections <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-    <div class="loader-logo-position-Binary-Ceramics">
-        <img src="img/LogoBC.png" class="loader-logo" alt="Cinque Terre" onclick="window.location='https://www.binaryceramics.com/'">
-        <h1 class="pageloaderText font-d" onclick="window.location='https://www.binaryceramics.com/'">BinaryCeramics</h1>
+  </div>
+
+  <div class="collections wrap-wide" role="list" aria-label="Collections">
+    {%- for c in site.data.collections %}
+    <a class="coll reveal" role="listitem" href="{% include bc-link.html path=c.path %}" target="_blank" rel="noopener" data-cursor-label="Shop">
+      <div class="coll__img">{% include img.html key=c.image alt=c.name sizes="(min-width: 1100px) 20vw, (min-width: 700px) 33vw, 70vw" %}</div>
+      <div class="coll__meta mono"><span>Series {{ c.code }}</span><span aria-hidden="true">↗</span></div>
+      <h3 class="coll__name">{{ c.name }}</h3>
+      <p class="coll__line">{{ c.line }}</p>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ================= 10 SELECTED WORK ================= -->
+<section class="section work" id="work" aria-labelledby="work-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">10</span> Selected work</p>
+    <h2 class="visually-hidden" id="work-title">Selected work</h2>
+    <p class="section__note mono">{{ selected | size }} projects · machines, installations, objects</p>
+  </div>
+  <div class="works wrap">
+    {%- for p in selected %}
+    <article class="w reveal {% cycle 'w--a', 'w--b', 'w--c' %}">
+      <a class="w__link" href="{{ p.url }}" data-cursor-label="Open">
+        <div class="w__media">
+          {%- if p.hero_video -%}
+            {% include video.html name=p.hero_video alt=p.title class="w__video" %}
+          {%- else -%}
+            {% include img.html key=p.hero alt=p.title sizes="(min-width: 1000px) 62vw, 100vw" %}
+          {%- endif -%}
+        </div>
+        <div class="w__info">
+          <span class="w__idx mono">{{ p.idx }}</span>
+          <h3 class="w__title">{{ p.title }}</h3>
+          <p class="w__meta mono">{% if p.year %}{{ p.year }} · {% endif %}{{ p.disciplines | join: " / " }}</p>
+          <p class="w__sum">{{ p.summary }}</p>
+          <span class="w__more mono">View project <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ================= 11 ARCHIVE ================= -->
+<section class="section archive" id="archive" aria-labelledby="archive-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">11</span> Archive</p>
+    <h2 class="visually-hidden" id="archive-title">Archive</h2>
+    <div class="filters mono" role="group" aria-label="Filter archive" data-filters>
+      <button type="button" aria-pressed="true" data-filter="*">All</button>
+      <button type="button" aria-pressed="false" data-filter="Sculpture">Sculpture</button>
+      <button type="button" aria-pressed="false" data-filter="Photography">Photography</button>
+      <button type="button" aria-pressed="false" data-filter="Kinetic">Kinetic</button>
     </div>
-</div>
+  </div>
+  <ol class="arch wrap" role="list" data-archive>
+    {%- for p in archive %}
+    {%- assign g = site.data.media[p.hero] %}
+    <li class="arch__row" data-tags="{{ p.disciplines | join: ',' }}">
+      <a href="{{ p.url }}" data-peek="/media/{{ p.hero }}-{{ g.w | first }}.webp" data-peek-ratio="{{ g.width }}/{{ g.height }}">
+        <span class="arch__idx mono">{{ p.idx }}</span>
+        <span class="arch__glyph" aria-hidden="true">{% include img.html key=p.glyph alt="" sizes="48px" %}</span>
+        <span class="arch__title">{{ p.title }}</span>
+        <span class="arch__sum">{{ p.summary }}</span>
+        <span class="arch__tag mono">{{ p.disciplines | join: " / " }}</span>
+        <span class="arch__arrow" aria-hidden="true">→</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ol>
+  <div class="peek" data-peek-el aria-hidden="true"><img alt=""></div>
+</section>
 
+<!-- ================= 100 PRESS ================= -->
+<section class="section" id="press" aria-labelledby="press-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">100</span> Press &amp; publications</p>
+    <h2 class="visually-hidden" id="press-title">Press and publications</h2>
+    <p class="section__note mono"><a href="/about/#cv">Exhibitions &amp; CV →</a></p>
+  </div>
+  <div class="wrap">{% include press.html %}</div>
+</section>
 
-
-
-<script>
-//Check if guest is visiting for the first time and if yes show logo animation
-
-// $(document).ready(function(){
-//         logoPopup();
-// });
-</script>
-<script>
-function logoPopup(){
-
-    var fadeInLogoDelayDesktop = 1500;
-    var fadeInLogoDelayMobile = 1000;
-
-    var pageloaderTextDesktop = 2000;
-    var pageloaderTextMobile = 1500;
-
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        console.log("device detected");
-        $(".loader-logo").css("width","150px");
-        $(".loader-logo").css("height","150px");
-        $(".pageloaderText").css("font-size","1em");
-        $(".pageloader").show();
-        $(".playerBox").hide();
-        $(".loader-logo").fadeTo(2000,0.8);
-        $(".pageloaderText").fadeTo(pageloaderTextMobile,0.5);
-        window.setTimeout(clearPageLoader,pageloaderTextMobile);
-    }
-    else{
-        console.log("desktop detected");
-        $(window).on("load", function (e) { 
-            var myPlayer = jQuery(".player").YTPlayer();
-            $(".container").hide();
-            $(".loader-logo").fadeTo(fadeInLogoDelayDesktop,0.8);
-            $(".pageloaderText").fadeTo(pageloaderTextDesktop,0.5);
-            window.setTimeout(clearPageLoader,pageloaderTextDesktop);
-        }); 
-    }
-}
-
-function clearPageLoader(){
-    //  $(".pageloader").fadeOut(2000); 
-    //  $(".container").fadeIn(3000);
-}
-</script>
-
-<script>
-    $( window ).on( "load", logoPopup());
-</script>
-
+<!-- ================= 101 ABOUT ================= -->
+<section class="section about-teaser" aria-labelledby="about-title">
+  <div class="wrap section__head">
+    <p class="kicker mono"><span class="kicker__idx">101</span> About</p>
+  </div>
+  <div class="at wrap">
+    <figure class="at__img reveal">
+      {% include img.html key="bc/delta-printer" alt="Yiannis Vogdanis sitting inside the large delta clay printer he built" sizes="(min-width: 900px) 50vw, 100vw" %}
+      <figcaption class="mono dim">Inside the large-format delta clay printer, Athens studio.</figcaption>
+    </figure>
+    <div class="at__copy">
+      <h2 class="h2 reveal" id="about-title">An unusual hybrid of design, craft and science.</h2>
+      <p class="reveal">That's how a professor once described me, and it's still the most accurate description I have. I studied fine arts in Rome, where I built my first 3D printer from a kit in 2012. Since then I've worked across art, universities and tech in San Francisco, Berlin and Barcelona, building sensors, robots, plotters and installations, before clay brought me back to Athens.</p>
+      <a class="btn reveal" href="/about/">Bio, CV &amp; exhibitions <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>

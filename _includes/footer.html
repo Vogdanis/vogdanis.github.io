@@ -1,0 +1,29 @@
+<footer class="foot" id="contact">
+  <div class="foot__inner">
+    <p class="kicker mono"><span class="kicker__idx">∞</span> Contact</p>
+    <h2 class="foot__title">Commissions, collaborations, <em>conversations.</em></h2>
+    <p class="foot__mail"><a class="mail" data-u="{{ site.email_user }}" data-d="{{ site.email_domain }}" href="/about/#contact">{{ site.email_user }} [at] {{ site.email_domain }}</a></p>
+    <div class="foot__grid mono">
+      <div>
+        <p class="foot__label">Me</p>
+        <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div>
+        <p class="foot__label">Studio</p>
+        <a href="{% include bc-link.html path='/' %}" target="_blank" rel="noopener">binaryceramics.com ↗</a>
+        <a href="{{ site.bc.instagram }}" target="_blank" rel="noopener">@binaryceramics ↗</a>
+      </div>
+      <div>
+        <p class="foot__label">Based in</p>
+        <span>{{ site.location }}</span>
+        <span class="dim">{{ site.coords }}</span>
+      </div>
+      <div class="foot__end">
+        <a href="#top" class="foot__top">Back to top ↑</a>
+        <span class="dim">© {{ site.time | date: "%Y" }} Yiannis Vogdanis</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot__word" aria-hidden="true">VOGDANIS</div>
+</footer>

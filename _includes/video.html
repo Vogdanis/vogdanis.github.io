@@ -1,0 +1,4 @@
+{%- comment -%} Silent looping video from media/video. Plays only while on screen (see site.js). {%- endcomment -%}
+<video class="{{ include.class }}" muted loop playsinline preload="none" poster="/media/video/{{ include.name }}.webp" data-autoplay aria-label="{{ include.alt | escape }}">
+  <source src="/media/video/{{ include.name }}.mp4" type="video/mp4">
+</video>

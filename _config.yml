@@ -1,0 +1,58 @@
+# vogdanis.com — Jekyll config (built automatically by GitHub Pages)
+title: Yiannis Vogdanis
+tagline: Artist & maker — I build the machines that make the work.
+description: >-
+  Yiannis Vogdanis is an Athens-based artist and maker working between craft, design and science:
+  computational ceramics, custom 3D clay printers, kinetic installations and interactive objects.
+  Founder of BinaryCeramics.
+url: "https://vogdanis.com"
+baseurl: ""
+lang: en
+email_user: yvogdanis
+email_domain: gmail.com
+location: Athens, Greece
+coords: "37.98°N 23.73°E"
+social:
+  instagram: https://www.instagram.com/y_vogdanis/
+  linkedin: https://www.linkedin.com/in/yiannis-vogdanis/
+bc:
+  url: https://binaryceramics.com
+  shop: https://binaryceramics.com/collections/shop
+  instagram: https://www.instagram.com/binaryceramics/
+  # appended to every outbound BinaryCeramics link so Shopify analytics can see traffic from this site
+  utm: "utm_source=vogdanis.com&utm_medium=referral&utm_campaign=portfolio"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project, body_class: page-project }
+  - scope: { path: "" }
+    values: { layout: default }
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: false
+excerpt_separator: "<!--more-->"
+
+exclude:
+  - README.md
+  - _tools
+  - "*.psd"
+  - "*.AI"
+  - "*.ai"
+  - "*.3dm"
+  - "*.3dmbak"
+  - "*.rhl"
+  - "*.dxf"
+  - "*tmp*"
+  - "*.webloc"
+  - img/projects/EXCLUDE
+  - "img/**/*.html"
+  - "img/**/*.html.tmp*"
+  - Gemfile
+  - Gemfile.lock
