@@ -17,7 +17,9 @@ hero: playball/cloud
 hero_video: playball-drift
 ai_motion: true
 glyph: glyph/playball
-youtube: fppi2PifkpE
+films:
+  - [fppi2PifkpE, "Llum festival Barcelona 2018 · video by Billy Craigan for IAAC"]
+  - [bhjlvhkh3pk, "Testing the installation before the festival"]
 gallery:
   - [pf/playball/179, ""]
   - [pf/playball/180, ""]

@@ -4,7 +4,7 @@ subtitle: A few seconds of colour
 idx: "01110"
 order: 14
 featured: true
-year:
+year: "2012"
 disciplines: [Photography]
 summary: Macro photographs of ink dropped into water, unfolding into plumes and veils before it dissolves.
 meta:
@@ -14,6 +14,8 @@ hero: inks/1
 hero_video: inks-bloom
 ai_motion: true
 glyph: glyph/inks
+films:
+  - [aYwV_QJV9-Y, "Ink trip (2012)"]
 gallery:
   - [inks/2, ""]
   - [inks/3, ""]

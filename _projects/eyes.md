@@ -15,6 +15,8 @@ hero: eyes/disk
 hero_video: eyes-pov
 glyph: glyph/eyes
 quote: ["Since we cannot change reality, let us change the eyes which see it.", "Nikos Kazantzakis"]
+films:
+  - [_XUMkSpRBBY, "Eyes – Occhi, the HDD project (2013)"]
 gallery:
   - [pf/eyes/085, "Revealed: the eye at the centre, its fragments around it"]
   - [pf/eyes/087, ""]

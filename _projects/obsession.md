@@ -13,8 +13,10 @@ meta:
   - [Challenge, "Hiding every component inside the sculpture"]
 hero: obsession/lit
 glyph: glyph/obsession
-youtube: h5xD5TAROxs
-youtube_2: ugg8x4_1pEw
+films:
+  - [YRw28S7PYIM, "Interactive installation, Rome (2017)"]
+  - [ugg8x4_1pEw, "Macrobot 01, shown at “Shot One Shot”, curated by Manuela Vannozzi"]
+  - [h5xD5TAROxs, "Alessandro Iacopelli: Insects Addiction, a portrait by MindWalk (2014)"]
 gallery:
   - [obsession/black, ""]
   - [obsession/build, "Wiring the body"]
@@ -22,4 +24,4 @@ gallery:
 ---
 This project is a collaboration with my very good friend and amazing artist Alessandro Iacopelli. Alessandro has a deep passion for insects, from breeding them to meticulous restoration and conservation, and this is where he finds inspiration for his sculptures. He uses very strong materials like stone, rebar and aluminium to make sculptures that, despite their massive weight, feel light and elegant.
 
-Our collaboration started when Alessandro had an idea for a sculpture unlike anything he had done before: an interactive piece that would balance on one point and rotate freely around it. My expertise was needed to make the sculpture interactive. The biggest challenge was hiding all the sensors and the microcontroller inside the body of the sculpture.
+Our collaboration started when Alessandro had an idea for a sculpture unlike anything he had done before: an interactive piece that would balance on one point and rotate freely around it. My expertise was needed to make the sculpture interactive. Propellers on its tail, driven by sensors at the front, turn the sculpture to follow whoever stands in front of it. The biggest challenge was hiding all the sensors and the microcontroller inside the body of the sculpture.

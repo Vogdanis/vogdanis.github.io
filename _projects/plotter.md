@@ -4,7 +4,7 @@ subtitle: Information changing form
 idx: "00101"
 order: 5
 featured: true
-year: "2019"
+year: "2017–19"
 disciplines: [Machines, Electronics, Drawing]
 summary: A drawing machine whose mechanism hides behind dark glass. Only the paper and a magnetic pen head that dances across it are visible.
 meta:
@@ -13,7 +13,9 @@ meta:
   - [Output, "Unique prints, never two identical"]
 hero: pf/plotter/121
 glyph: glyph/plotter
-youtube: Ye_aAHbxuWY
+films:
+  - [Ye_aAHbxuWY, "Vertical Plotter (2019)"]
+  - [ZissX1r9vVc, "MagPlot teaser (2017)"]
 gallery:
   - [pf/plotter/136, "First words"]
   - [pf/plotter/106, "Plot"]

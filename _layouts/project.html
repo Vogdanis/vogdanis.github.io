@@ -47,11 +47,20 @@ layout: default
     </div>
   </section>
 
-  {%- if page.youtube %}
+  {%- if page.films and page.films.size > 0 %}
   <section class="p-film wrap-wide reveal" aria-label="Film">
-    <p class="kicker mono"><span class="kicker__idx">▶</span> Film</p>
-    {% include youtube.html id=page.youtube title=page.title %}
-    {%- if page.youtube_2 %}<div class="p-film__2">{% include youtube.html id=page.youtube_2 title=page.title %}</div>{% endif %}
+    <p class="kicker mono"><span class="kicker__idx">▶</span> Film{% if page.films.size > 1 %}s <span class="dim">{{ page.films.size }}</span>{% endif %}</p>
+    {%- for f in page.films %}
+      {%- assign fid = f | first -%}{%- assign fcap = f | last -%}
+      {%- if fcap == fid %}{% assign fcap = "" %}{% endif -%}
+      {%- capture ftitle %}{{ page.title }}{% if fcap != "" %}: {{ fcap }}{% endif %}{% endcapture -%}
+      {%- if forloop.index == 2 %}<div class="p-film__more">{% endif %}
+    <figure class="p-film__item{% if forloop.first %} p-film__item--main{% endif %}">
+      {% include youtube.html id=fid title=ftitle %}
+      {%- if fcap != "" %}<figcaption class="mono">{{ fcap }}</figcaption>{% endif %}
+    </figure>
+      {%- if forloop.last and forloop.length > 1 %}</div>{% endif %}
+    {%- endfor %}
   </section>
   {%- endif %}
 

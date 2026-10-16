@@ -26,7 +26,7 @@ Personal site of Yiannis Vogdanis. It's a Jekyll site that GitHub Pages builds a
    - `featured: true` shows the project in **Selected work**. Leave it out to put it in the **Archive**.
    - `order` sets the position. `idx` is the binary index shown on the site.
    - `hero` is the image key. `hero_video` is optional (a file in `media/video/`), and `ai_motion: true` adds the "AI motion study" note.
-   - `youtube` is the video ID. `gallery` is a list of `[image key, caption]`.
+   - `films` is a list of `[YouTube video ID, caption]`. The first one is shown large, the rest in a grid below it. `gallery` is a list of `[image key, caption]`.
 5. Write the text below the second `---`.
 6. Commit and push. GitHub Pages rebuilds in about a minute.
 

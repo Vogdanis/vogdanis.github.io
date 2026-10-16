@@ -15,7 +15,8 @@ meta:
   - [Mask, "Wireless, battery powered"]
 hero: pf/dystopian/057
 glyph: glyph/dystopian
-youtube: ClmSuncslRw
+films:
+  - [ClmSuncslRw, "Teaser · sound by Pietro Sofi"]
 gallery:
   - [pf/dystopian/056, "Two versions of the mask"]
   - [pf/dystopian/059, ""]

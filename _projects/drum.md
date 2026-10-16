@@ -4,7 +4,7 @@ subtitle: A portable instrument
 idx: "00111"
 order: 7
 featured: true
-year:
+year: "2016"
 disciplines: [Instrument, Electronics, Woodwork]
 summary: A capacitive MIDI controller in oak and copper. Eight domes sense the touch of a hand, and it is small enough to travel with.
 meta:
@@ -16,7 +16,8 @@ hero: drum/angle
 hero_video: drum-light
 ai_motion: true
 glyph: glyph/drum
-youtube: Cpy00zhUPg4
+films:
+  - [Cpy00zhUPg4, "Music: Leon Lappas"]
 gallery:
   - [pf/drum/162, ""]
   - [pf/drum/163, ""]
