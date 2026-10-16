@@ -27,7 +27,6 @@ gallery:
   - [pf/plotter/124, "CAD model"]
   - [pf/plotter/127, "CAD model, exploded"]
   - [plotter/design, ""]
-  - [plotter/rail, "Early motion tests"]
 ---
 I find the flow of information utterly fascinating. From its source to its final destination, information is channelled through many media and keeps being transformed along the way. The simplest example is speech: an idea is transformed into a sound wave that travels through the air and reaches a human ear. The eardrum vibrates and produces an electrical signal, which the brain finally decodes.
 

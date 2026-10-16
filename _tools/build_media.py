@@ -90,7 +90,6 @@ IMAGES = {
     "dystopian/wire": P + "dystopian/Inverted.png",
     # ---- Plotter ------------------------------------------------------
     "plotter/design": P + "plotter/PlotterDesign.png",
-    "plotter/rail": P + "rail/rail.jpg",
     # ---- pyDrum -------------------------------------------------------
     "drum/front": P + "drum/1.jpg",
     "drum/angle": P + "drum/2.jpg",

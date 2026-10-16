@@ -55,7 +55,6 @@
 "dystopian/map-detail": {"w": [480, 960, 1600, 2400], "width": 2960, "height": 1055, "color": "#1e2c3d", "alpha": true}
 "dystopian/wire": {"w": [480, 960, 1600, 2400], "width": 2433, "height": 1690, "color": "#10110f", "alpha": true}
 "plotter/design": {"w": [480, 960, 1510], "width": 1510, "height": 1463, "color": "#030303", "alpha": true}
-"plotter/rail": {"w": [320], "width": 320, "height": 320, "color": "#917f72", "alpha": false}
 "drum/front": {"w": [480, 960, 1500], "width": 1500, "height": 1000, "color": "#c5a8a0", "alpha": false}
 "drum/angle": {"w": [480, 960, 1500], "width": 1500, "height": 1000, "color": "#b4987e", "alpha": false}
 "obsession/lit": {"w": [480, 800], "width": 800, "height": 574, "color": "#363125", "alpha": false}
