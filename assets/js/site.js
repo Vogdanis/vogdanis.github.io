@@ -53,11 +53,15 @@
   }, { threshold: 0.15 });
   vids.forEach((v) => { v.muted = true; vidIO.observe(v); });
   // pause in background tabs; resume what's on screen when the tab comes back
+  // Re-measuring is more reliable than remembering: observe() always reports the current state,
+  // so every video that is on screen right now starts again.
+  const wake = () => setTimeout(() => vids.forEach((v) => { vidIO.unobserve(v); vidIO.observe(v); }), 60);
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) vids.forEach((v) => v.pause()); else onScreen.forEach(play);
+    if (document.hidden) vids.forEach((v) => v.pause()); else wake();
   });
   // coming "back" restores the page from the browser's cache with every video paused
-  addEventListener('pageshow', (e) => { if (e.persisted) onScreen.forEach(play); });
+  addEventListener('pageshow', (e) => { if (e.persisted) wake(); });
+  addEventListener('focus', wake);
 
   /* ---- email: assembled client-side to keep scrapers out ---- */
   $$('.mail[data-u]').forEach((a) => {

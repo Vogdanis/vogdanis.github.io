@@ -12,7 +12,6 @@ meta:
   - [Elements, "Four magnetically balanced pairs"]
 hero: balance/1
 hero_video: balance-drift
-motion_note: "Motion simulation from the original photograph: each piece turns on its own line, as it does in a draft."
 glyph: glyph/balance
 gallery:
   - [balance/1, ""]
