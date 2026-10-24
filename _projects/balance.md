@@ -11,7 +11,8 @@ meta:
   - [Materials, "Steel, painted wood, magnets, thread"]
   - [Elements, "Four magnetically balanced pairs"]
 hero: balance/1
-hero_video: balance-drift
+hero_video: balance-breeze
+video_port: true
 glyph: glyph/balance
 gallery:
   - [balance/1, ""]

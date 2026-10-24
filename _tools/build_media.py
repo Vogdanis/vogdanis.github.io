@@ -200,7 +200,7 @@ VIDEOS = {
     "drum-light": ("_tools/higgsfield/drum.mp4", 1280, False, 0, None),
     "bc-tornado": ("_tools/higgsfield/bc_tornado.mp4", 1080, False, 0, None),
     # not AI: simulated from the hero photo, see _tools/balance/animate.py
-    "balance-drift": ("_tools/balance/balance-loop-closeup.mp4", 1080, False, 0, None),
+    "balance-breeze": ("_tools/balance/balance-loop.mp4", 1080, False, 0, None, 19),
 }
 
 
@@ -250,7 +250,7 @@ def build_image(key, src):
     return {"w": widths, "width": w, "height": h, "color": avg_color(im), "alpha": has_alpha}
 
 
-def build_video(name, src, maxw, is_gif, start, dur):
+def build_video(name, src, maxw, is_gif, start, dur, crf=24):
     os.makedirs(os.path.join(OUT, "video"), exist_ok=True)
     dst = os.path.join(OUT, "video", f"{name}.mp4")
     poster = os.path.join(OUT, "video", f"{name}.webp")
@@ -266,7 +266,7 @@ def build_video(name, src, maxw, is_gif, start, dur):
     cmd += ["-i", os.path.join(ROOT, src)]
     if dur:
         cmd += ["-t", str(dur)]
-    cmd += ["-an", "-vf", vf, "-c:v", "libx264", "-preset", "slow", "-crf", "24",
+    cmd += ["-an", "-vf", vf, "-c:v", "libx264", "-preset", "slow", "-crf", str(crf),
             "-movflags", "+faststart", "-pix_fmt", "yuv420p", dst]
     subprocess.run(cmd, check=True)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", dst, "-frames:v", "1",
