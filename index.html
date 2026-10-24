@@ -89,7 +89,7 @@ jsonld: >-
     {%- for p in selected %}
     {%- assign hm = site.data.media[p.hero] -%}
     {%- assign hr = hm.width | times: 1.0 | divided_by: hm.height -%}
-    <article class="w reveal {% cycle 'w--a', 'w--b', 'w--c' %}{% unless p.hero_video %}{% if hr < 0.95 %} w--port{% endif %}{% endunless %}" data-tags="{{ p.disciplines | join: ',' }}">
+    <article class="w reveal {% cycle 'w--a', 'w--b', 'w--c' %}{% if p.video_port %} w--port{% else %}{% unless p.hero_video %}{% if hr < 0.95 %} w--port{% endif %}{% endunless %}{% endif %}" data-tags="{{ p.disciplines | join: ',' }}">
       <a class="w__link" href="{{ p.url }}" data-cursor-label="Open">
         <div class="w__media">
           {%- if p.hero_video -%}

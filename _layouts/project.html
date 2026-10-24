@@ -11,7 +11,7 @@ layout: default
 
 {%- assign hm = site.data.media[page.hero] -%}
 {%- assign hr = hm.width | times: 1.0 | divided_by: hm.height -%}
-<article class="project{% unless page.hero_video %}{% if hr < 0.95 %} project--port{% endif %}{% endunless %}">
+<article class="project{% if page.video_port %} project--port{% else %}{% unless page.hero_video %}{% if hr < 0.95 %} project--port{% endif %}{% endunless %}{% endif %}">
   <header class="p-head wrap">
     <p class="crumbs mono">
       <a href="/#work">Work</a>
@@ -29,7 +29,8 @@ layout: default
         {% include img.html key=page.hero alt=page.title class="p-hero__media" sizes="(min-width: 1400px) 1400px, 100vw" eager=true full=true %}
       {%- endif -%}
     </div>
-    {%- if page.ai_motion %}<figcaption class="p-note mono">Motion study generated with AI from an original photograph. The object is unchanged.</figcaption>{% endif %}
+    {%- if page.motion_note %}<figcaption class="p-note mono">{{ page.motion_note }}</figcaption>
+    {%- elsif page.ai_motion %}<figcaption class="p-note mono">Motion study generated with AI from an original photograph. The object is unchanged.</figcaption>{% endif %}
   </figure>
 
   <section class="p-body wrap">

@@ -25,7 +25,7 @@ Personal site of Yiannis Vogdanis. It's a Jekyll site that GitHub Pages builds a
 4. Copy an existing file in `_projects/` (e.g. `playball.md`) and edit the front matter:
    - `featured: true` shows the project in **Selected work**. Leave it out to put it in the **Archive**.
    - `order` sets the position. `idx` is the binary index shown on the site.
-   - `hero` is the image key. `hero_video` is optional (a file in `media/video/`), and `ai_motion: true` adds the "AI motion study" note.
+   - `hero` is the image key. `hero_video` is optional (a file in `media/video/`), and `ai_motion: true` adds the "AI motion study" note. `video_port: true` shows a portrait video at its full height, and `motion_note` replaces the note with your own text.
    - `films` is a list of `[YouTube video ID, caption]`. The first one is shown large, the rest in a grid below it. `gallery` is a list of `[image key, caption]`.
 5. Write the text below the second `---`.
 6. Commit and push. GitHub Pages rebuilds in about a minute.
