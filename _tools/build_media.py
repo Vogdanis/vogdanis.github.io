@@ -200,7 +200,7 @@ VIDEOS = {
     "drum-light": ("_tools/higgsfield/drum.mp4", 1280, False, 0, None),
     "bc-tornado": ("_tools/higgsfield/bc_tornado.mp4", 1080, False, 0, None),
     # not AI: simulated from the hero photo, see _tools/balance/animate.py
-    "balance-breeze": ("_tools/balance/balance-loop.mp4", 1080, False, 0, None),
+    "balance-drift": ("_tools/balance/balance-loop-closeup.mp4", 1080, False, 0, None),
 }
 
 

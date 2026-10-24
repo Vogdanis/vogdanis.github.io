@@ -40,16 +40,24 @@
 
   /* ---- videos: load + play only while visible ---- */
   const vids = $$('video[data-autoplay]');
+  const onScreen = new Set();
+  const play = (v) => {
+    if (reduce) return;
+    if (v.preload === 'none') v.preload = 'auto';
+    const p = v.play(); if (p && p.catch) p.catch(() => {});
+  };
   const vidIO = new IntersectionObserver((entries) => {
     entries.forEach(({ target: v, isIntersecting }) => {
-      if (isIntersecting && !reduce) {
-        if (v.preload === 'none') v.preload = 'auto';
-        const p = v.play(); if (p && p.catch) p.catch(() => {});
-      } else { v.pause(); }
+      if (isIntersecting) { onScreen.add(v); play(v); } else { onScreen.delete(v); v.pause(); }
     });
   }, { threshold: 0.15 });
   vids.forEach((v) => { v.muted = true; vidIO.observe(v); });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) vids.forEach((v) => v.pause()); });
+  // pause in background tabs; resume what's on screen when the tab comes back
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) vids.forEach((v) => v.pause()); else onScreen.forEach(play);
+  });
+  // coming "back" restores the page from the browser's cache with every video paused
+  addEventListener('pageshow', (e) => { if (e.persisted) onScreen.forEach(play); });
 
   /* ---- email: assembled client-side to keep scrapers out ---- */
   $$('.mail[data-u]').forEach((a) => {
