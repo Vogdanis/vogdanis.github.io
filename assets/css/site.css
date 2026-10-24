@@ -191,7 +191,7 @@ em { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-s
 .facts li span { color: var(--ember); width: 2em; }
 @media (max-width: 900px) { .studio__grid { grid-template-columns: 1fr; } }
 
-.collections { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--gap); margin-top: clamp(56px, 7vw, 110px); }
+.collections { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); margin-top: clamp(56px, 7vw, 110px); }
 .coll { text-decoration: none; display: block; }
 .coll:hover { color: var(--ink); }
 .coll__img { aspect-ratio: 4 / 5; overflow: hidden; background: var(--bg-2); }

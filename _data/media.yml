@@ -7,7 +7,6 @@
 "bc/dash": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#2f2a26", "alpha": false}
 "bc/intersect": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#221b18", "alpha": false}
 "bc/intersect-detail": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#191617", "alpha": false}
-"bc/frequency": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#413f43", "alpha": false}
 "bc/sea-urchin": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#2e2722", "alpha": false}
 "bc/lathe": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#4b4e4f", "alpha": false}
 "bc/extruder-parts": {"w": [480, 960, 1600, 2000], "width": 2000, "height": 2000, "color": "#918d8b", "alpha": false}

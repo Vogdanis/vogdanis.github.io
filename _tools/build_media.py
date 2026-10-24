@@ -37,7 +37,6 @@ IMAGES = {
     "bc/dash": BC + "Dash_Group.jpg",
     "bc/intersect": BC + "Intersect_Group.jpg",
     "bc/intersect-detail": BC + "Intersect_Banner.jpg",
-    "bc/frequency": BC + "Frequency_Collection.jpg",
     "bc/sea-urchin": BC + "untitled_38_of_56.jpg",
     "bc/lathe": BC + "20221214-IMG_1619.jpg",
     "bc/extruder-parts": BC + "77.jpg",
