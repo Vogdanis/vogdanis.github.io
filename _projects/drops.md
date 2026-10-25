@@ -13,8 +13,9 @@ meta:
   - [Exposure, "Bulb mode in a dark room, lit only by the flash"]
   - [Subject, "Water"]
 hero: drops/5
-hero_video: drops-ripple
+hero_video: drops-fall
 video_port: true
+motion_note: "Motion study generated with AI from the original photograph."
 glyph: glyph/drops
 gallery:
   - [drops/5, ""]
