@@ -200,6 +200,8 @@ VIDEOS = {
     "bc-tornado": ("_tools/higgsfield/bc_tornado.mp4", 1080, False, 0, None),
     # not AI: simulated from the hero photo, see _tools/balance/animate.py
     "balance-breeze": ("_tools/balance/balance-loop.mp4", 1080, False, 0, None, 19),
+    # not AI: ripples animated from the photograph, see _tools/drops/animate.py
+    "drops-ripple": ("_tools/drops/drops-loop.mp4", 1080, False, 0, None, 19),
 }
 
 
