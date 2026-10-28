@@ -1,13 +1,22 @@
+{%- comment -%}
+Press list. Params: limit (number of entries), bc (true = only entries marked bc: true).
+Entries without a url are shown as print/coverage rows; `links` adds small outlet links.
+{%- endcomment -%}
+{%- assign items = site.data.press -%}
+{%- if include.bc -%}{%- assign items = items | where_exp: "p", "p.bc == true" -%}{%- endif -%}
+{%- assign lim = include.limit | default: 200 -%}
 <ol class="press" role="list">
-{%- for p in site.data.press -%}
+{%- for p in items limit: lim -%}
   <li class="press__item reveal">
-    <a href="{{ p.url }}" target="_blank" rel="noopener">
-      <span class="press__date mono">{{ p.date | date: "%d.%m.%Y" }}</span>
+    {%- if p.url %}<a class="press__row" href="{{ p.url }}" target="_blank" rel="noopener">{% else %}<div class="press__row press__row--static">{% endif %}
+      <span class="press__date mono">{% if p.date_label %}{{ p.date_label }}{% else %}{{ p.date | date: "%d.%m.%Y" }}{% endif %}</span>
       <span class="press__outlet">{{ p.outlet }}</span>
       <span class="press__title"><span class="press__t" {% if p.lang == 'GR' %}lang="el"{% endif %}>{{ p.title }}</span>{% if p.title_en %}<span class="press__en">{{ p.title_en }}</span>{% endif %}</span>
-      <span class="press__tags mono">{{ p.kind }} · {{ p.lang }}{% if p.author %} · {{ p.author }}{% endif %}</span>
-      <span class="press__arrow" aria-hidden="true">↗</span>
-    </a>
+      <span class="press__tags mono">{{ p.kind }} · {{ p.lang }}{% if p.author %} · {{ p.author }}{% endif %}
+        {%- if p.links %}<span class="press__links">{% for l in p.links %}{% assign lu = l | last %}{% assign ll = l | first %}{% if lu != "" %}<a href="{{ lu }}" target="_blank" rel="noopener">{{ ll }} ↗</a>{% else %}<span>{{ ll }}</span>{% endif %}{% endfor %}</span>{% endif -%}
+      </span>
+      <span class="press__arrow" aria-hidden="true">{% if p.url %}↗{% endif %}</span>
+    {% if p.url %}</a>{% else %}</div>{% endif %}
   </li>
 {%- endfor -%}
 </ol>

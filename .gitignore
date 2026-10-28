@@ -4,3 +4,20 @@ _site/
 .DS_Store
 _tools/higgsfield/
 Claude outputs/
+
+# ---- private material: never commit or publish ----
+# press archive, contracts and correspondence kept next to the site
+Εκθέσεις/
+Εκθέσεις/
+**/*[Aa]greement*
+**/*[Cc]ontract*
+**/*Συμβόλαιο*
+**/*_encrypted*
+*.docx
+*.doc
+*.pages
+*.key
+*.eml
+*.msg
+.env
+.env.*

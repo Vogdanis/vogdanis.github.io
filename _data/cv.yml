@@ -1,8 +1,11 @@
 # CV data used on /about/. Edit freely; order is top to bottom.
 exhibitions:
   - { year: "2024", title: "Hospitality commission — Hilton, Athens", place: "BinaryCeramics · Tornado, Dash & Sea Urchin pieces for guest rooms" }
+  - { year: "2023", title: "Above and Below the Sea Level — group show", place: "Sealed Earth Gallery, Santorini · with Nikos Athanasopoulos and Anali Vega", link: "https://www.santorini.net/above-and-below-sea-level-exhibition-at-sealed-earth-gallery/" }
+  - { year: "2023", title: "Copper vessels for the Zeus+Dione 10-year anniversary show", place: "Resort ’24 collection, with Marios Schwab · Piraeus", link: "https://zeusndione.com/fr/node/4673" }
+  - { year: "2020", title: "BinaryCeramics — solo show", place: "Solo Shows, The Bold Type Hotel, Patras · curated by Theofano Tzimi" }
   - { year: "2018", title: "Global Grad Show", place: "Dubai, United Arab Emirates" }
-  - { year: "2016", title: "Michalis Cacoyannis Foundation", place: "Athens, Greece" }
+  - { year: "2016", title: "Perception — solo show", place: "Michael Cacoyannis Foundation, Athens", link: /projects/eyes/ }
   - { year: "2013", title: "Teatro India", place: "Rome, Italy" }
   - { year: "2013", title: "Fuori Salone", place: "Milan, Italy" }
   - { year: "2012", title: "Premio Limen Arte — special mention (Promesse) for Eyes", place: "Vibo Valentia, Calabria, Italy", link: /projects/eyes/ }

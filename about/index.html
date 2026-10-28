@@ -68,12 +68,18 @@ jsonld: >-
   </div>
 </section>
 
-<section class="section" aria-labelledby="press-title">
+<section class="section" id="press" aria-labelledby="press-title">
   <div class="wrap section__head">
     <p class="kicker mono"><span class="kicker__idx">100</span> Press &amp; publications</p>
     <h2 class="visually-hidden" id="press-title">Press</h2>
   </div>
-  <div class="wrap">{% include press.html %}</div>
+  <div class="wrap">
+    <blockquote class="pullquote reveal">
+      <p>“I’m not a programmer, a sculptor, a ceramicist or a robotics engineer. Society expects a very specific title for each of us, but my case doesn’t fit a single category.”</p>
+      <cite class="mono">Kathimerini, K magazine, 2022</cite>
+    </blockquote>
+    {% include press.html %}
+  </div>
 </section>
 
 <section class="section ab-studio wrap" aria-label="Studio">

@@ -9,7 +9,7 @@ disciplines: [Installation, Electronics, Optics]
 summary: Images of an eye, hidden in the spinning platter of a hard disk. They appear only when you stand at the right distance.
 meta:
   - [Medium, "Hard disks, LEDs, distance sensor, black glass"]
-  - [Also titled, "Perception"]
+  - [Exhibited, "As “Perception”, solo show, Michael Cacoyannis Foundation, Athens, 7–23 September 2016"]
   - [Recognition, "Premio Limen Arte 2012, special mention (Promesse)"]
 hero: eyes/disk
 hero_video: eyes-pov

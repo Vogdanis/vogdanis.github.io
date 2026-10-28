@@ -118,7 +118,10 @@ jsonld: >-
     <h2 class="visually-hidden" id="press-title">Press and publications</h2>
     <p class="section__note mono"><a href="/about/#cv">Exhibitions &amp; CV →</a></p>
   </div>
-  <div class="wrap">{% include press.html %}</div>
+  <div class="wrap">
+    {% include press.html limit=6 %}
+    <p class="press__more mono"><a href="/about/#press">All press &amp; publications ({{ site.data.press | size }}) →</a></p>
+  </div>
 </section>
 
 <!-- ================= 101 ABOUT ================= -->

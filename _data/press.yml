@@ -1,4 +1,6 @@
 # Press & publications — newest first. Add a new entry at the top.
+# Optional fields: date_label (shown instead of the exact date), links (a list of [label, url]
+# for coverage spread over several outlets), bc: true (also listed on the BinaryCeramics page).
 - outlet: Athens Voice
   title: "Γιάννης Βογδάνης: Κεραμικά από ένα -άμεσο- μέλλον"
   title_en: "Ceramics from an immediate future"
@@ -6,6 +8,7 @@
   date: 2024-02-16
   lang: GR
   kind: Profile
+  bc: true
   url: https://www.athensvoice.gr/politismos/design-arhitektoniki/836487/giannis-vogdanis-keramika-apo-ena-ameso-mellon/
 
 - outlet: LiFO
@@ -15,7 +18,18 @@
   date: 2023-05-09
   lang: GR
   kind: Feature
+  bc: true
   url: https://www.lifo.gr/culture/design/keramika-kai-3d-printing-i-nea-tasi
+
+- outlet: iefimerida
+  title: "Το μέλλον είναι τώρα: Κεραμικά με σχέδια που γράφονται σε κώδικες και τυπώνονται με 3D printers"
+  title_en: "The future is now: ceramics with designs written in code and printed with 3D printers"
+  author: Katerina I. Anesti
+  date: 2023-01-20
+  lang: GR
+  kind: Column
+  bc: true
+  url: https://www.iefimerida.gr/politismos/benetsianes-tsaroyhis-papoytsia-yfasma
 
 - outlet: Shoutout Miami
   title: "Meet Yiannis Vogdanis — Multidisciplinary Artist"
@@ -31,4 +45,64 @@
   date: 2022-12-19
   lang: EN
   kind: Editorial
+  bc: true
   url: https://adorno.design/editorial/binary-simplicity-in-the-dash-collection-by-yiannis-vogdanis/
+
+- outlet: ready2fly
+  title: "The White List: Binary Ceramics, Athens"
+  title_en: "Sky Express in-flight magazine, p. 106"
+  author:
+  date: 2022-12-01
+  date_label: "12.2022"
+  lang: EN/GR
+  kind: Print
+  bc: true
+
+- outlet: Kathimerini · K
+  title: "Γιάννης Βογδάνης: εξερευνώντας τις δυνατότητες μιας τέχνης αρχαίας"
+  title_en: "Exploring the possibilities of an ancient art. From “Six Greek artists making art from the future”, K magazine no. 989"
+  author: Xenia Georgiadou
+  date: 2022-05-15
+  date_label: "05.2022"
+  lang: GR
+  kind: Print · Profile
+  bc: true
+
+- outlet: Pelop.gr
+  title: "Γιάννης Βογδάνης: Προτιμώ την αλλαγή στη δουλειά μου παρά τα ακίνητα αντικείμενα"
+  title_en: "“I prefer change in my work to still objects”"
+  author:
+  date: 2020-11-09
+  lang: GR
+  kind: Interview
+  bc: true
+  url: https://pelop.gr/?docid=602055&page=article
+
+- outlet: Patras press
+  title: "BinaryCeramics, solo show at The Bold Type Hotel"
+  title_en: "Coverage of the Patras show"
+  author:
+  date: 2020-10-16
+  date_label: "10.2020"
+  lang: GR
+  kind: Coverage
+  bc: true
+  links:
+    - [The Best, "https://www.thebest.gr/article/597603-flas-stin-ekthesi-tou-gianni-bogdani-egkainiase-ta-solo-shows-sto-the-bold-type-hotel"]
+    - [Pelop.gr, ""]
+    - [Alpha Patras, ""]
+    - [Tempo24, ""]
+
+- outlet: Athens press
+  title: "Perception, at the Michael Cacoyannis Foundation"
+  title_en: "Coverage of the 2016 solo show"
+  author:
+  date: 2016-09-07
+  date_label: "09.2016"
+  lang: GR
+  kind: Coverage
+  links:
+    - [LiFO, "https://www.lifo.gr/guide/arts/news/giannis-bogdanis-perception"]
+    - [Athens Voice, "https://www.athensvoice.gr/city-guide/arts/323573/giannis-vogdanis-perception/"]
+    - [Flash.gr, ""]
+    - [Το Κουτί της Πανδώρας, ""]
